@@ -1,0 +1,320 @@
+{% extends 'base.html' %} {% block title %}
+<title>gamevaultcasino Blog</title>
+  <meta name="robots" content="noindex">
+{% endblock title %} {% block content %}
+ <!-- inner hero section start -->
+ <section class="bannerSp">
+			 
+    <div style="margin-top: 25px !important;" class="container">
+    
+          <div id="landingContact-Text" class="row">
+            
+          
+            <div  style=" display: flex !important; justify-content: center !important; flex-direction: column !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
+                  <!-- <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/> -->
+               <h1 style="color: #FFB80D; font-weight: 900; text-align: center;">
+                   Blog Tags
+               </h1>  
+          </div>
+          
+            <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+                           <div class="alert alert-success hidden" id="contactSuccess">
+                            <strong>Success!</strong> Your message has been sent to us.
+                          </div>
+          
+                          <div class="alert alert-danger hidden" id="contactError">
+                            <strong>Error!</strong> There was an error sending your message.
+                          </div>
+          
+                          <form action="{% url 'core:home' %}" method="POST" id="contactForm">
+                                  {% csrf_token %}
+                            <div class="row">
+                                  
+                                  <div class="form-group">
+                                    <div class="col-md-12">
+                                           <input
+                                            type="text"
+                                            value=""
+                                            data-msg-required="Please enter your name."
+                                            maxlength="100"
+                                            class="form-control mb-20 form-control_name contact__input contact__input_input contact__input_name"
+                                            placeholder="Fullname"
+                                            name="name"
+                                            id="name"
+                                            required
+                                          />
+                                    </div>
+                                    <div class="col-md-12">
+                                           <input
+                                            type="email"
+                                            value=""
+                                            data-msg-required="Please enter your email address."
+                                            data-msg-email="Please enter a valid email address."
+                                            maxlength="100"
+                                            class="form-control mb-20 contact__input contact__input_input"
+                                            name="email"
+                                            placeholder="Email address"
+                                            id="email"
+                                            required
+                                          />
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="row">
+                                  <div class="form-group">
+                                    <div class="col-md-12">
+                                            <div class="phone-container">
+                                                  <span class="mb-20 phone-addon">+1</span>
+                                                  <input 
+                                                  type="number"
+                                                  value=""
+                                                  pattern="[1-9]"
+                                                  onKeyDown="{checkIfNumber(event)}"
+                                                  data-msg-required="Please enter the subject."
+                                                  maxlength="10"
+                                                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                                  class="form-control mb-20 contact__input contact__input_phone contact__input_input"
+                                                  name="phone"
+                                                  id="phone"
+                                                  placeholder="Phone"
+                                                  required
+                                                    />
+                                          <div id="phone-error" class="error-message"></div>
+                                          </div>
+                                    </div>
+    
+                                     <div class="col-md-12">
+                                          <select
+                                            data-msg-required="Please enter the subject."
+                                           maxlength="100"
+                                           class="form-control mb-20 contact__input contact__input_input contact__input_select"
+                                           name="subject"
+                                           id="subject"
+                                           placeholder="Subject"
+                                           required>
+                             <option class="d-none" value="" disabled selected>Are you looking for?</option>
+                            <option value="Player">Player</option>
+                            <option value="Distribution">Distribution</option>
+                            <option value="New Shop">New Shop</option>
+                            <option value="Existing Shop">Existing Shop</option> 
+                                    </select>
+                                   </div>
+                                  </div>
+                            </div>
+                            <div class="row">
+                                  <div class="form-group">
+                                    <div class="col-md-12">
+                                           <textarea
+                                            maxlength="5000"
+                                            data-msg-required="Please enter your message."
+                                            rows="10"
+                                            class="form-control contact__input"
+                                            name="message"
+                                            id="message"
+                                            placeholder="Message"
+                                            style="height: 145px;"
+                                          ></textarea>
+                                    </div>
+                                  </div>
+                            </div>
+                            
+                            <div class="terms">
+                                  <input name="check" required  class="terms__checkbox contact__input" id="checkbox1"  type="checkbox"/>
+                                  <label class="terms__label" for="checkbox1" style="font-size: 12px !important;">Subscription agreement and <a class="terms__anchor"  href="{% url 'main:terms-and-conditions' %}" >Terms and conditions</a>  agreement</label>
+                                  
+                                  </div>
+                          <div class="rechapta d-none">
+                                   <div  class="g-recaptcha"  data-callback="recaptchaCallback" data-sitekey="6LcxWx8iAAAAAOh_1FkGyizmjuJYncMg_vMa8qr-"></div>
+                          </div>
+
+                            <div class="row">
+                                  <div class="col-md-12 d-flex justify-content-center">
+                                          <button
+                                          style="width: 100% !important;"
+                                          type="submit"
+                                          disabled
+                                          value="Send Message"
+                                           class="btn btn-primary btn-lg btn-lg_sp btn__disabled"
+                                          data-loading-text="Loading..."
+                                    
+                                    >Submit</button>
+                                  </div>
+                            </div>
+                           </form>
+                  </div>	
+          
+    </div>
+    
+    </section>
+    <div class="container">
+        <div class="divider"></div>
+ <section class="blog-section padding-top padding-bottom overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9">
+                <div class="row align-items-center">
+                    {% for blog in blogs %}
+                        <div class="col-lg-6">
+                            <div class="blog-item">
+                                <div class="blog-item__thumb">
+                                    <img class="post__image" src="{{blog.image.url}}" alt="{{blog.image_alt}}">
+                                </div>
+                                <div class="blog-item__content">
+                                    <p class="blog__meta">{{blog.created_at}}</p>
+                                    <h3  class="title">
+                                        <a href="{% url 'main:blog-detail' blog.slug %}" class="post__anch">
+                                            {{blog.title}}
+                                        </a>
+                                    </h3>
+                                    <p class="blog-item__content">
+                                        {{blog.short_description}}
+                                    </p>
+                                    <a href="{% url 'main:blog-detail' blog.slug %}" class="btn post__btn">Read </a>
+                                </div> 
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="categories">
+                    <h2 class="categories__title">Categories</h2>
+                    <ul class="categories__ul">
+                        {% for category in categories %}
+                        <li class="categories__li">
+                            <a href="{% url 'main:blog-category-list' category.slug %}" class="categories__a">{{ category.title }}</a>
+                        </li>
+                        {% endfor %} 
+                    </ul>
+                </div>
+                <div class="categories">
+                    <h2 class="categories__title">Recent posts</h2>
+                    {% for recent in recent_blogs %}
+                    <div class="recet">
+                        <a href="{% url 'main:blog-detail' slug=recent.slug %}">
+                            <h3 class="postt__title">{{recent.title}}</h3>
+                            <p class="recet__text">
+                                {{recent.created_at}}
+                            </p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-12" style="margin-bottom: 5rem;">
+                <div class="pagi">
+                    {% if page_obj.has_previous %}
+                     <!-- <li class="disabled">&laquo;</a></li> -->
+                        <div class="pagi__arrow">
+                            <a class="pagibut btn post__btn" href="?page={{ page_obj.previous_page_number }}">
+                                < Prev 
+                            </a>
+                        </div>
+                        {% if page_obj.number > 3 %}
+                        <div class="pagi__arrow">
+                            <a class="pagibut btn post__btn" href="?page=1">1</a>
+                        </div>
+                            {% if page_obj.number > 4 %}
+                            <div class="pagi__arrow"> <span>...</span></div>  
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                  
+                    {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == num %}
+                        <div class="pagi__arrow">
+                            <a class="pagibut btn post__btn" href="?page={{ num }}">{{ num }}</a>
+                        </div>
+                    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                        <div class="pagi__arrow">
+                            <a class="pagibut btn post__btn" href="?page={{ num }}">{{ num }}</a>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+                  
+                    {% if page_obj.has_next %}
+                    {% if page_obj.number < page_obj.paginator.num_pages|add:'-3' %}
+                        <div class="pagi__arrow">
+                            <span>...</span>
+                        </div>
+                        <div  class="pagi__arrow">
+                            <a class="pagibut btn post__btn" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                        </div>
+                    {% elif page_obj.number < page_obj.paginator.num_pages|add:'-2' %}
+                        <div class="pagi__arrow"><a class="pagibut btn post__btn" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a></div>
+                    {% endif %}
+                    <div class="pagi__arrow"><a class="pagibut btn post__btn" href="?page={{ page_obj.next_page_number }}"> Next ></a></div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+      .bannerSp{
+			background-image: url(/static/img/blog-banner.webp);
+	
+		}
+    .bannerSp__imageWrapper_right{
+            margin: 25% auto ;
+            }
+    @media (max-width:993px){
+            .bannerSp__imageWrapper_right{
+                    margin: unset !important;
+            }
+    }
+    .blog-item{
+        background-color:#23274D ;
+        box-shadow: unset !important;
+        border-radius: 20px !important;
+    }
+   .blog-item:hover{
+    box-shadow: 0px 0px 20px  #8babfa!important;
+   }
+   h3{
+    color: #FFB80D;
+    font-size: 36px;
+    font-family: 'IBM Plex Mono', monospace !important;
+   }
+   .post__anch{
+    font-family: 'IBM Plex Mono', monospace !important;
+    color: #FFB80D;
+    text-transform: unset !important;
+   }
+   .pagibut {
+            padding: 8px 17px !important; 
+        }
+        .pagi__arrow {
+          display: inline;
+        }
+        .pagi {
+          text-align: center;
+        }
+        img.post__image {
+            width: 100%;
+            max-height: 270px;
+            min-height: 270px;
+            border-radius: 20px;
+        }
+    
+        a.btn.post__btn {
+            background-color: #3C5799 ;
+            border: 1px solid #3C5799 !important;
+            color: #ffffff;
+            width: 100%;
+        }
+        a.btn.post__btn:hover {
+            background-color: #5e81da!important;
+            color: #000000 !important;
+        }
+        p.blog__meta {
+            margin-top: 13px;
+        }
+        .blog-item {
+            margin-bottom: 30px;
+            padding: 17px;
+            box-shadow: 0px 0px 6px 0 rgb(255 200 39 / 40%), 0px 0px 8px 0 rgb(255 82 1 / 20%);
+            border-radius: 10px;
+        }
+    </style>
+{% endblock content %}

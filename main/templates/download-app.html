@@ -1,0 +1,1233 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>
+    Download gamevaultcasino App to Play The Best Games on Mobile
+</title>
+<meta name="keywords" content="gamevaultcasino Casino">
+<meta name="description"
+    content=" If you want to enjoy the best games, outstanding gameplay, and many bonuses and promotions, download the gamevaultcasino Casino app today!">
+
+<meta name="author" content="gamevaultcasino Casino">
+{% endblock title %}
+{% block content %}
+<style>
+    /* .container {
+        width: 100%;
+    } */
+
+    #first {
+        font-size: 50px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+    
+   .description h2 , .game-heading h2 {
+        font-size: 27px;
+    }
+
+    #download-container p {
+        font-size: 19px;
+    }
+
+
+
+    .dsc_apps {
+
+        margin: auto 0;
+        text-align: center;
+    }
+    #dsc-h1{
+        font-family: inherit;
+        font-weight: inherit;
+        color: white;
+        text-align: center;
+    }
+
+    .download-apps {
+        margin: 90px 0;
+        display: flex;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        width: 100%;
+        align-items: center;
+    }
+
+
+    .apps {
+        width: 385px;
+        height: 500px;
+        border: 4px solid goldenrod;
+        border-radius: 10px;
+        margin: 0 20px;
+        animation: neon infinite 5s;
+        box-sizing: border-box;
+    }
+    /* .apps_{
+        width: 100%;
+        height: 100%;
+    }
+   */
+    @keyframes neon {
+        10% {
+            box-shadow: -4px -4px 15px #ff0000, 2px 2px 3 10px #f17a65;
+
+        }
+
+        25% {
+            box-shadow: -4px -4px 10px rgb(43, 180, 226), 5px 5px 15px rgb(25, 60, 238);
+
+        }
+
+        50% {
+            box-shadow: -4px -4px 10px rgb(255, 251, 11), 5px 5px 15px rgb(137, 80, 0)
+        }
+
+
+    }
+
+
+  
+    .apps_ a{
+        text-decoration: none;
+    }
+    .inner {
+        position: relative;
+        box-sizing: border-box;
+        align-items: center;
+        text-align: center;
+        height: 95px;
+        margin: 15px 0;
+
+    }
+ 
+    .inner p {
+        font-size: 24px;
+        padding: 0 25px;
+        line-height: 35px;
+        color: white;
+    }
+
+    .inner img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 125%;
+        height: 94%;
+        object-fit: contain;
+        overflow-clip-margin: content-box;
+    }
+    #span-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner span {
+        display: block;
+        text-align: center;
+        margin:  auto;
+        padding:  auto;
+        font-size: 16px;
+        color: white;
+        margin: 0 5px;
+    }
+     
+
+    #icon_div {
+
+        height: 30px;
+        background-image: linear-gradient(#b59843, #ffc107);
+        border-radius: 5px;
+        width: 40%;
+        margin: 5px auto;
+      
+    }
+
+    #icon_div:hover {
+
+        background-image: linear-gradient(#ffe082, #ffbf00);
+        transition: ease-in-out 1.05s;
+
+    }
+
+
+    .img-div {
+        text-align: center;
+        align-items: center;
+        padding: 3px;
+        margin: 3px;
+    }
+   
+    .apps_ a{
+        width: 100%;
+        height: 100%;
+    }
+    
+
+
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 30px 0;
+    }
+    .description h1{
+        margin: 25px auto;
+    }
+
+    .game-heading {
+        width: 100%;
+        text-align: center;
+        margin:15px 0 10px 0;
+        text-shadow: 5px 0 4px rgb(255, 212, 104);
+        animation: new infinite 7s;
+  
+    }@keyframes new{
+        10%{
+            text-shadow: 5px 0 5px rgb(3, 242, 255);
+        }
+        25%{
+            text-shadow: 5px 0 5px rgb(0, 151, 245);
+        }70%{
+            text-shadow: 5px 0 5px #fc00e7;
+        }
+    }
+        #downloads{
+            display: flex;
+            margin: 90px auto;
+        }
+    .outer-flex,#downloads {
+        border: 4px solid goldenrod;
+        border-radius: 15px;
+        box-shadow: -1px -1px 6px 0 #ffc107, 1px 1px 8px 0 #ffc107;
+        animation: move infinite 7s;
+        box-sizing: border-box;
+    }
+  
+
+    @keyframes move {
+
+        10% {
+            box-shadow: -5px -5px 26px rgb(48, 204, 252), 5px 5px 26px rgb(84, 214, 254);
+
+        }
+
+        25% {
+            box-shadow: -5px -5px 26px rgb(61, 29, 245), 5px 5px 45px rgb(28, 31, 237);
+    
+        } 
+        40%{
+            box-shadow: -5px -5px 26px rgb(149, 0, 255), 5px 5px 26px rgb(183, 0, 255);
+        }
+
+        50% {
+            box-shadow: -5px -5px 16px rgb(197, 72, 255), 5px 5px 15px rgb(162, 4, 186);
+        }
+
+
+    }
+
+    .game-flex {
+        display: flex;
+        width: 95%;
+        box-sizing: border-box;
+        justify-content: space-between;
+        margin: 20px auto;
+        
+    }
+
+    .game-flex-up {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+
+    }
+
+    .inner-flex {
+        display: flex;
+        box-sizing: border-box;
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+       
+    }
+    #inner-flex-para{
+        flex-direction: column;
+    }
+    #inner-flex-para p{
+        text-align: justify;
+    }
+   
+
+    .inner-flex p {
+        text-align: justify;
+        margin: auto 0;
+        padding: 0;
+        color: white;
+    }
+    #reverse-p{
+      text-align: justify;
+ 
+    }
+
+    .game-images img {
+        width: 50%;
+        height: 50%;
+        margin: auto ;
+    }
+.download-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 250px;
+        height: 250px;
+        /* height: 300px; */
+        object-fit: contain;
+        overflow-clip-margin: content-box;
+}
+.sub-image{
+    width: 250px;
+    height: 150px;
+}
+
+
+.images-div {
+    position: relative;
+    border-radius: 10px;
+    height: 240px;
+    box-sizing: border-box;
+   
+}
+.game-images .medium-size .game-logo{
+    width: 75% !important;
+    box-sizing: border-box;
+}
+
+.game-images{
+    margin: auto ;
+    padding: auto;
+}
+.game-images .game-logo{
+    width: 60% !important;
+}
+.game-logo{
+    padding-top: 0 ;
+}
+.into{
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%,-50%);
+          }
+     .inner-container{
+        margin: 15px;
+     }
+#downloads div{
+    box-sizing: border-box;
+    margin: 15px auto;
+
+}
+#sub-div #sub-image{
+    width: 300px;
+}
+
+@media (max-width:1200px){
+  
+    /* .download-apps{
+        flex-direction: column;
+        
+    } */
+    .apps{
+        margin: 20px auto;
+    }
+}
+
+   
+    @media (max-width: 1000px) {
+        #downloads{
+            flex-direction: column;
+        }
+.game-flex{
+    width: 100%;
+}
+      
+        .apps {
+            margin: 25px auto;
+        }
+        .inner p{
+            padding: 8px 0;
+        }
+        
+
+        .download-apps{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        
+        }
+       .inner img, .qr-div img{
+        height: 91%;
+
+       }
+
+        .description, .download-apps,.outer-flex, #downloads {
+            margin: 35px auto;
+        }
+
+       
+
+        .inner {
+            margin: auto auto;
+            padding: auto;
+            height: 80px;
+
+        }
+        .apps{
+            height: 70%;
+        }
+
+        .inner p {
+            font-size: 19px;
+            /* margin: 25px auto; */
+        }
+
+       #span-div span{
+        font-size: 16px;
+       }
+
+        .game-images img {
+            width: 95%;
+            height: fit-content;
+            align-items: center;
+        }
+          
+        
+        .inner-flex p ,#reverse-p {
+            font-size: 16px;
+         
+        }
+        
+        #sub-div{
+            height: 180px;
+        }
+        .game-images .medium-size .game-logo{
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 870px) {
+        /* .dsc_apps{
+            margin: 15px;
+        } */
+       .images-div #icon-id{
+        width: 230px;
+       }
+         .inner-flex{
+            margin: 15px auto;
+         }
+        .game-flex {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+        }
+        .inner img{
+            height: 90%;
+         }#qr-div,.qr{
+            display: none;
+          }
+
+        #reverse-game-flex {
+            flex-direction: column-reverse;
+
+        }
+        .inner-flex p ,#reverse-p{
+            text-align: center;
+        }
+
+
+        .description h1 {
+            text-align: center;
+            font-size: 27px;
+        }
+
+        .description p {
+            font-size: 16px;
+        }
+
+        .dsc_apps h1 {
+            font-size: 27px;
+        }
+
+        .inner-flex {
+            width: 80%;
+        }
+
+      
+        /* .qrlogo img {
+          width: auto;
+          height: auto;
+    
+          transform: translate(-12%);
+   
+        } */
+
+        .game-flex-up img {
+            text-align: center;
+            align-items: center;
+
+        }
+
+        .dsc_apps h1 {
+            font-size: 24px;
+            color: white !important;
+        }
+
+        .play {
+            background-color: aliceblue;
+            font-size: 8px;
+        }
+        .images-div {
+            height: 200px;
+        }
+        .description h1{
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 601px) {
+       .game-images .game-logo {
+            width: 80% ;
+         }
+         .game-images .medium-size .game-logo{
+            width: 100% !important;
+         }
+         .download-image{
+            width: 240px !important;
+         }
+         .sub-outer .download-image {
+            width: 200px;
+         }
+         #downloads div{
+            margin: auto;
+         }
+         .images-div #icon-id{
+        width: 180px !important;
+       }
+          
+        .apps {
+            margin: 10px 0;
+            width: 80%;
+            height: 40% !important;
+        }
+       
+        
+        .inner-flex{
+            padding: auto;
+        }
+        
+    }
+
+    @media (max-width: 450px) {
+        .download-apps {
+
+            width: 100%;
+            margin: auto;
+            height: 20%;
+
+        }
+        .game-images .medium-size .game-logo{
+            width: 100% !important;
+         }
+        .download-image{
+            height: 180px;
+        }
+        #downloads div{
+            margin: 0 ;
+        }
+        #sub-image{
+            width: 218px;
+        }
+        #icon-id{
+            margin: auto auto;
+        }
+
+        .inner {
+            width: 100%;
+            height: 90px;
+            margin: 0 auto;
+        }
+      
+        /* .inner img {
+      
+        width: 50%;
+        height: 50%;
+    
+    } */
+        .inner p {
+            font-size: 14px;
+
+        }
+
+        .inner span {
+            font-size: 12px !important;
+           padding: 0 10px !important;
+        }
+        #inner-flex-para p{
+            text-align: start;
+        }
+    }
+</style>
+
+
+
+
+
+<div id="download-container" class="container">
+    <div class="dsc_apps">
+
+        <h1 id="dsc-h1">
+            
+            The gamevaultcasino Casino app is your best bet for a top-notch gaming experience on the go. Our casino app’s simple design makes it easy to navigate the platform, whether it’s searching for your favorite game or cashing out your winnings.
+            
+        </h1>
+       
+
+           <h2 id="dsc-h1">
+            You can access 300+ high-quality games, all of which feature high-definition visuals, immersive audio, and massive payouts.
+            
+        </h2>
+       
+        <h2 id="dsc-h1">
+            Our gaming app's intuitive design puts all your favorite games at your fingertips. But, of course, the gamevaultcasino Casino app offers more benefits. Let's find out! 
+            
+        </h2>
+
+    </div>
+        
+   
+     
+     
+        
+       
+
+  
+    <div class="download-apps">
+            <div class="apps"> <div class="apps_"><a
+                    href="https://rm777.net/" target="_blank">
+
+            <div class="inner">
+                <p>gamevaultcasino App for Android</p>
+            </div>
+            <div class="inner"> <img src="{% static 'img/download-app/google-play.png' %}" alt="playstore"></div>
+            <div id="qr-div" class="inner"><img class="qr"  src="{% static 'img/qrcode/android.png' %}" alt="qr-code" ></div>
+            <div id="span-div" class="inner"> <span>Download gamevaultcasino App to play on your Android phone.</span> </div>
+            <div class="inner" id="icon_div"> 
+                    <div id="icon-div" class="img-div" title="download"> <img class="icons"
+                            src="{% static 'img/download-app/android-icons.png' %}" alt="android">
+                    </div>
+                 </div></a></div>
+
+        </div>
+        <div class="apps">  <div class="apps_"><a href="https://rm777.net/" target="_blank"> 
+            <div class="inner">
+                <p> gamevaultcasino App for iOS</p>
+            </div>
+            <div class="inner"> <img src="{% static 'img/download-app/app-store (1).png' %}" alt="safari"></div>
+            <div id="qr-div" class="inner"><img class="qr" src="{% static 'img/qrcode/iOS.png' %}" alt="qr-code"></div>
+            <div  id="span-div" class="inner"> <span> Download gamevaultcasino App to play on your  iPhone.</span> </div>
+            <div class="inner" id="icon_div"> 
+                    <div id="icon-div" class="img-div" title="download"> <img class="icons" src="{% static 'img/download-app/icons8-apple-logo-50.png' %}"
+                            alt="apple"></div>
+                 </div>
+               
+                
+                </a></div>
+        </div>  
+    
+       
+
+    </div>
+
+
+
+
+    <div class="description">
+
+
+
+        <h2 id="dsc-h1">
+            Get Exclusive Coupon Codes By Playing on gamevaultcasino Casino App
+            
+            
+        </h2>
+        <br>
+        <p>
+            As you probably know, gamevaultcasino Casino has numerous extensive bonuses on its platform to boost your winning chances. In addition, as a new player, you can get several bonuses, like signup bonuses, which can help you win more cash. 
+
+            
+        </p>
+
+        <p>
+            You'll be eligible for all these outstanding bonuses when you use our mobile casino app. 
+            
+        </p>
+    
+        <p>
+            <strong>
+            However, you’ll also get exclusive coupon codes available only on our casino app. You can only get these types of bonuses on our mobile casino app. 
+            </strong>
+        </p>
+        <p>
+            By taking advantage of these bonuses, you can quickly and easily unlock large match bonuses for your deposits! 
+        </p>
+
+      
+    </div>  
+    <div id="downloads" >
+        
+        <div class="images-div">
+              
+                  <img id="icon-id" class="download-image" src="{% static 'img/download-app/MysteriousKingdom.webp' %}"alt="game-image1">
+              
+          </div>
+  <div class="images-div">
+  
+    
+                  <img id="icon-id"  class="download-image" src="{% static 'img/download-app/EasterBunnies.webp' %}" alt="game-image2">
+             
+        </div>
+   <div class="images-div">
+         
+                  <img id="icon-id"  class="download-image" src="{% static 'img/download-app/DragonDynasty.webp' %}" alt="game-image3">
+           
+         </div>
+      </div>
+    <div class="description">
+
+
+
+        <h2 id="dsc-h1">
+            Different Collections of Casino Games are Available
+            
+        </h2>
+   
+        
+        <p>
+            The gamevaultcasino Casino app is a great way to play games wherever you want because it gives you access to hundreds of quality casino games. All different aspects of the game, such as visuals, good themes, etc., stay the same on the casino app. 
+            
+        </p>
+        <p>
+            So you can focus on the game without worrying about missing key features. Insead, you can focus on having fun, making memories, and scoring bonus points during the game.
+        </p>
+        <p>
+            Overall, the games on the casino app have the same quality as the ones on the desktop version. Regarding the game's gameplay and features, we exceed your expectations.
+        </p>
+        <p>
+            The gamevaultcasino mobile casino app is the ideal way to have a great time playing games with your friends as you increase your chances of winning.
+        </p>
+        
+    </div>
+
+  
+
+    <div class="description">
+
+
+
+        <h2 id="dsc-h1" >
+            Get Updates on Games, New Features, and More
+        </h2>
+   
+        <p>
+            Our mobile casino app is a great way to stay on top of the latest game updates, promotions, exclusive bonus deals, and more. In addition, gamevaultcasino may send you messages with special bonuses that will enhance your gaming experience and boost your chances of winning. 
+        </p>
+
+        <p>
+            You always get new features and special offers from the gamevaultcasino Casino app. So don't miss out on the fun and the possibility of winning a lot of money!
+        </p> 
+     
+  
+        
+    </div>
+
+   
+
+
+  <div id="downloads" >
+        
+            <div class="images-div">
+                  
+                      <img id="icon-id" class="download-image" src="{% static 'img/download-app/PiggyGoldCoins.webp' %}" alt="game-image4">
+                  
+              </div>
+      <div class="images-div">
+      
+        
+                      <img id="icon-id"  class="download-image" src="{% static 'img/download-app/oceanmonster.webp' %}" alt="game-image5">
+                 
+            </div>
+       <div class="images-div">
+             
+                      <img id="icon-id"  class="download-image" src="{% static 'img/download-app/gamevaultcasino.webp' %}" alt="game-image6">
+               
+             </div>
+          </div>
+
+
+    <div class="description">
+
+
+
+
+        <h2 id="dsc-h1">
+            Customer Support is Ready to Assist Anytime
+        </h2>
+     
+        <p>
+            Everyone at gamevaultcasino hopes that your experience is fun and hassle-free. Because of its intuitive design and user-friendly interface, this platform makes it easy to play your favorite games. 
+         </p>
+     
+
+     
+        <p>
+            However, if issues arise, you can rest assured that contacting our customer support team will be simple. And you won't spend much time talking to customer support to get the problem fixed. 
+        </p>
+
+    
+        <p> 
+            The casino app includes a built-in chat feature, so you can quickly contact customer support as you go about your daily routine. Furthermore, we have qualified people available to help you at all hours.
+        </p>
+ 
+   
+        <p>
+            The best part is that you can complete all these tasks on your mobile device. So download the gamevaultcasino Casino app.
+        </p>
+
+
+
+    <div id="downloads" >
+        
+        <div id="sub-div" class="images-div">
+              
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/GoldenToadsub.webp' %}" alt="game-image7">
+              
+          </div>
+  <div id="sub-div" class="images-div">
+  
+    
+                  <img id="sub-image"  class="download-image" src="{% static 'img/download-app/Lobster Partysub.webp' %}" alt="game-image8">
+             
+        </div>
+   <div id="sub-div"class="images-div">
+         
+                  <img id="sub-image"  class="download-image" src="{% static 'img/download-app/CrabKing3sub.webp' %}" alt="game-image9">
+           
+         </div>
+      </div>
+
+
+
+
+        <h2 id="dsc-h1">
+            Compatible With Numerous Desktop Devices
+        </h2>
+       
+        <p>
+            With gamevaultcasino, you can play your favorite games in several ways without interfering with your gameplay. For example, you can use your desktop device to access the mobile casino without interfering with your ability to play games.
+        </p>
+     
+  
+      
+        <p>
+            This way, you won't have to worry about technical difficulties, whether playing your favorite games on the gamevaultcasino Android app, gamevaultcasino iOS app, or your desktop PC. But, of course, nothing has changed about the superb gameplay, unique features, or stunning graphics.
+        </p>
+
+        <h2 id="dsc-h1">
+            Android Users Can Download the gamevaultcasino Android App
+        </h2>
+       
+        <p>
+            If you're an Android user, you can download the gamevaultcasino Android app and have exciting adventures while increasing your cash rewards. Compared to the PC versions, there is no difference in visual, sound, or general quality.
+        </p>
+     
+  
+      
+        <p>
+            Do download the gamevaultcasino Android app and play your favorite casino games on the go! 
+            
+        </p>
+    
+   
+    </div>
+   
+    <div class="download-apps">
+        <div class="apps"> <div class="apps_"><a
+                href="https://rm777.net/" target="_blank">
+
+        <div class="inner">
+            <p>gamevaultcasino App for Android</p>
+        </div>
+        <div class="inner"> <img src="{% static 'img/download-app/google-play.png' %}" alt="playstore"></div>
+        <div id="qr-div" class="inner"><img class="qr"  src="{% static 'img/qrcode/android.png' %}" alt="qr-code" ></div>
+        <div id="span-div" class="inner"> <span>Download gamevaultcasino App to play on your Android phone.</span> </div>
+        <div class="inner" id="icon_div"> 
+                <div id="icon-div" class="img-div" title="download"> <img class="icons"
+                        src="{% static 'img/download-app/android-icons.png' %}" alt="android">
+                </div>
+             </div></a></div>
+
+    </div>
+    <div class="apps">  <div class="apps_"><a href="https://rm777.net/" target="_blank"> 
+        <div class="inner">
+            <p> gamevaultcasino App for iOS</p>
+        </div>
+        <div class="inner"> <img src="{% static 'img/download-app/app-store (1).png' %}" alt="safari"></div>
+        <div id="qr-div" class="inner"><img class="qr" src="{% static 'img/qrcode/iOS.png' %}" alt="qr-code"></div>
+        <div  id="span-div" class="inner"> <span> Download gamevaultcasino App to play on your  iPhone.</span> </div>
+        <div class="inner" id="icon_div"> 
+                <div id="icon-div" class="img-div" title="download"> <img class="icons" src="{% static 'img/download-app/icons8-apple-logo-50.png' %}"
+                        alt="apple"></div>
+             </div>
+           
+            
+            </a></div>
+    </div>  
+
+   
+
+</div>
+
+    <div class="description">
+
+
+
+        <h2 id="dsc-h1" >
+            The gamevaultcasino iOS App for Apple Users 
+        </h2>
+   
+        <p>
+            If you have an iOS device, download the gamevaultcasino iOS app, and you'll have access to a library of hundreds of great games. In addition, the casino app streamlines the process of obtaining the latest features, games, and bonus codes.
+        </p>
+
+        <p>
+            That makes it easy to play your preferred games, get outstanding bonuses and prompts, and increase your chances of winning! So download the gamevaultcasino iOS app now!
+        </p> 
+     
+  
+        
+    </div>
+
+    <div class="description">
+
+        <h2 id="dsc-h1" >
+            gamevaultcasino Casino App: Top Games to Play
+                </h2>
+   
+        <p>
+            Download the gamevaultcasino casino app and enjoy the best games in the casino industry. Some of them are below:
+
+        </p>
+        
+    </div>
+
+
+    <div class="outer-flex">
+        <div class="inner-container">
+        <div class="game-heading">
+            <h2>
+                Baby Octopus
+
+            </h2>
+        </div>
+
+        <div class="game-flex">
+
+
+            <div class="inner-flex">
+                <div class="game-images">
+        <img class="game-logo" src="{% static 'img/download-app/Baby Octopus.webp' %}" alt="babyOctopus-logo"> </div>
+            </div>
+
+            <div id="inner-flex-para" class="inner-flex">
+                <p class="first">
+                   Get ready for a global underwater war in Baby Octopus!           
+                </p>
+                <p>
+                    This outstanding game takes you to a real battle with numerous underwater creatures. There are sharks, crab monsters, mermaids, and new boss characters such as mystic dragons, buffalo thunder, lucky shamrock, etc. All of them has different size and shape and move in random directions.
+                </p>
+            
+            </div>
+
+
+        </div>
+
+        <div id="reverse-game-flex" class="game-flex">
+            <div id="inner-flex-para" class="inner-flex">
+                <p id="reverse-p">
+                    Besides characters, you will love new weaponry. Various faster and bigger weapons and bullets help you catch the highest-paying prey. You can use laser crab, super bomb crab, roulette crab, lightning and vertex fish, etc.
+                </p>
+                <p id="reverse-p">
+                    So, choose your weapon, aim in the right direction, gather as many points as possible, and don’t forget to enjoy!
+                </p>
+            </div>
+
+          
+            <div class="inner-flex">
+                   
+                <div class="game-images"> <div class="medium-size"> <img class="game-logo" src="{% static 'img/download-app/Baby Octopus 1.webp' %}" alt="babyOctopus-game1"></div></div>
+
+            </div>
+
+
+        </div>
+  </div>
+    </div>
+
+    <div id="downloads" >
+       
+           <div id="sub-div" class="images-div">
+            
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/babyOctopusSub1.webp' %}" alt="babyOctopus-game2">
+       
+         </div>
+        
+           <div id="sub-div" class="images-div">
+             
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/babyOctopusSub2.webp' %}" alt="babyOctopus-game3">
+              
+                 </div>
+   
+           <div id="sub-div" class="images-div">  
+                  <img id="sub-image"class="download-image" src="{% static 'img/download-app/babyOctopusSub3.webp' %}" alt="babyOctopus-game4">
+              
+          </div> 
+    </div>
+    <div class="outer-flex">
+        <div class="inner-container">
+        <div class="game-heading">
+            <h2>
+                Crab King
+            </h2>
+        </div>
+
+      
+        <div class="game-flex">
+
+            <div class="inner-flex">
+                <div class="game-images"> <img class="game-logo" src="{% static 'img/download-app/CrabKing.webp' %}" alt="CrabKing-logo">
+                </div>
+
+
+            </div>
+
+            <div id="inner-flex-para" class="inner-flex">
+
+
+                <p>
+                    If you are into fish shooting games and would love to enjoy a rich underwater world, you must try Crab King. This excellent fish table game includes 30 different sea creatures in one tank!
+                </p>
+                <p>
+                    The speeds, sizes, and directions of each species are different. And you aim to kill bigger ones to gather maximum points. Remember, the bigger the fish, the higher the points and the more challenging to kill it.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div id="reverse-game-flex" class="game-flex">
+
+
+            <div id="inner-flex-para" class="inner-flex">
+                <p id="reverse-p">
+                    Crab King arcade game has up-to-date weaponry and various bullets to ensure you get the best aiming and shooting options. So, learn the game's features and all the bonus game opportunities. Also, understand which weapon works better for different species, have fun, and win cash! 
+                </p>
+            </div>
+
+
+            <div class="inner-flex">
+
+                <div class="game-images"> <div class="medium-size"> <img class="game-logo" src="{% static 'img/download-app/CrabKing1.webp'%}" alt="CrabKing-game1"></div></div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div id="downloads" >
+        <div id="sub-div" class="images-div">
+    
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/CrabkingSub1.webp' %}" alt="CrabKing-game2">
+          
+        </div>
+
+  <div id="sub-div" class="images-div">
+          
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/CrabkingSub2.webp' %}" alt="CrabKing-game3">
+           
+      </div>
+   
+           <div id="sub-div" class="images-div">  
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/CrabkingSub3.webp' %}" alt="CrabKing-game4">
+             
+        </div> 
+      </div>
+    
+    <div class="outer-flex">    
+        <div class="inner-container">
+        <div class="game-heading">
+            <h2>
+
+                Meteor Shower
+            </h2>
+        </div>
+
+
+  
+
+
+        <div class="game-flex">
+
+            <div class="inner-flex">
+                <div class="game-images"> <img class="game-logo" src="{% static 'img/download-app/MeteorShower.webp' %}" alt="MeteorShower-logo"> </div>
+            </div>
+            <div id="inner-flex-para" class="inner-flex">
+                <p> 
+                    If you are into fish arcade games, Meteor Shower will definitely catch your interest. The game’s intriguing premise and stunning presentation will further impress you.
+ 
+                </p>
+                <p>
+                    The visual and sound quality of Meteor Shower is just staggering. The animations are well-made, and you won't get bored shooting crabs, fish, octopuses, and other marine life.
+                </p>
+                <p>
+                    The mission is simple: you need to collect points by identifying different types of fish. Your score will increase proportionally to the number and value of fish you capture.
+
+                </p>
+            </div>
+              </div>
+       
+
+
+
+        <div id="reverse-game-flex" class="game-flex">
+            <div id="inner-flex-para" class="inner-flex">
+                <p id="reverse-p">
+                    It’s important to remember that if you manage to reel in the big boss character, you’ll have access to two attacks that will let you reel in even more fish. 
+                </p>
+                <p id="reverse-p">
+                    To win even more prizes and have a fantastic time, you must collect all six gems before the gloves burst into a tremendous explosion.
+
+                </p>
+              
+            </div>
+            <div class="inner-flex">
+
+
+                <div class="game-images"> <div class="medium-size"> <img class="game-logo" src="{% static 'img/download-app/MeteorShower1.webp' %}" alt="MeteorShower-game1"></div> </div>
+            </div>
+        </div>
+
+ </div>
+    </div>
+
+    <div id="downloads" >
+        <div id="sub-div" class="images-div">
+         
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/MeteorShowerSub1.webp' %}" alt="MeteorShower-game2">
+         
+        </div>
+
+  <div id="sub-div" class="images-div">
+         
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/MeteorShowerSub2.webp' %}" alt="MeteorShower-game3">
+           
+      </div>
+   
+           <div id="sub-div" class="images-div">  
+                  <img id="sub-image" class="download-image" src="{% static 'img/download-app/MeteorShowerSub3.webp' %}" alt="MeteorShower-game4">
+           
+        </div> 
+      </div>
+
+
+
+  <div class="description">
+
+
+        <h2 id="dsc-h1">
+            Get Huge Bonuses by Playing the Best Games and Win Large Prizes!
+
+        </h2>
+        <p>
+            With the gamevaultcasino Casino app, you can enjoy more than 300 casino games, exclusive bonuses, and many ways to win. If you have any concerns, you can immediately call customer support and get your needed answers. 
+        </p>
+
+        <p>
+            Have the time by installing the mobile casino app right now!
+
+        </p>
+   
+
+    </div>
+
+
+
+  
+  
+
+   
+
+</div>
+<div class="download-apps">
+    <div class="apps"> <div class="apps_"><a
+            href="https://rm777.net/" target="_blank">
+
+    <div class="inner">
+        <p>gamevaultcasino App for Android</p>
+    </div>
+    <div class="inner"> <img src="{% static 'img/download-app/google-play.png' %}" alt="playstore"></div>
+    <div id="qr-div" class="inner"><img class="qr"  src="{% static 'img/qrcode/android.png' %}" alt="qr-code" ></div>
+    <div id="span-div" class="inner"> <span>Download gamevaultcasino App to play on your Android phone.</span> </div>
+    <div class="inner" id="icon_div"> 
+            <div id="icon-div" class="img-div" title="download"> <img class="icons"
+                    src="{% static 'img/download-app/android-icons.png' %}" alt="android">
+            </div>
+         </div></a></div>
+
+</div>
+<div class="apps">  <div class="apps_"><a href="https://rm777.net/" target="_blank"> 
+    <div class="inner">
+        <p> gamevaultcasino App for iOS</p>
+    </div>
+    <div class="inner"> <img src="{% static 'img/download-app/app-store (1).png' %}" alt="safari"></div>
+    <div id="qr-div" class="inner"><img class="qr" src="{% static 'img/qrcode/iOS.png' %}" alt="qr-code"></div>
+    <div  id="span-div" class="inner"> <span> Download gamevaultcasino App to play on your  iPhone.</span> </div>
+    <div class="inner" id="icon_div"> 
+            <div id="icon-div" class="img-div" title="download"> <img class="icons" src="{% static 'img/download-app/icons8-apple-logo-50.png' %}"
+                    alt="apple"></div>
+         </div>
+       
+        
+        </a></div>
+</div>  
+
+
+
+</div>
+  
+
+
+
+</div>
+
+
+{% endblock %}

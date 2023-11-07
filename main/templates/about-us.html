@@ -1,0 +1,376 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+<title>gamevaultcasino is the Best Platform for Sweepstakes Players</title>
+<meta name="keywords" content={{about_content.meta_keywords}}>
+<meta name="description" content={{about_content.meta_description}}>
+{% endblock title %}
+
+
+{% block content %}
+<style>
+        p {
+                word-wrap: break-word;
+        }
+
+        .about-outer {
+                flex-wrap: wrap !important;
+                align-items: center;
+        }
+        .bannerSp{
+			background-image: url(/static/img/AbotLand.webp);
+	
+		}
+        .about-outer div {
+                box-shadow: 0 0 15px lightblue;
+                background-color: #151234;
+                width: 32%;
+                height: 325px;
+                padding: 25px;
+                border-radius: 20px;
+                margin: 10px auto;
+        }
+     
+        .about-outer div h3 {
+                font-size: 48px;
+                color: #03CBFD;
+                margin: 10px auto;
+        }
+
+        .about-outer div h4 {
+                margin: 15px auto;
+                font-size: 20px;
+                line-height: 25px;
+                font-weight: 500;
+        }
+
+        #down-home {
+                background-image: url("/static/img/AboutCard.webp");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+        }
+
+        @media (max-width:992px) {
+                .about-outer div {
+                        margin: 10px !important;
+                        width: 100% !important;
+                }
+        }
+</style>
+<section class="bannerSp">
+			 
+        <div style="margin-top: 25px !important;" class="container">
+        
+              <div id="landingContact-Text" class="row">
+                
+              
+                <div  style="display: block !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
+                      <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/>
+              </div>
+              
+                <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+                               <div class="alert alert-success hidden" id="contactSuccess">
+                                <strong>Success!</strong> Your message has been sent to us.
+                              </div>
+              
+                              <div class="alert alert-danger hidden" id="contactError">
+                                <strong>Error!</strong> There was an error sending your message.
+                              </div>
+              
+                              <form action="{% url 'core:home' %}" method="POST" id="contactForm">
+                                      {% csrf_token %}
+                                <div class="row">
+                                      
+                                      <div class="form-group">
+                                        <div class="col-md-12">
+                                               <input
+                                                type="text"
+                                                value=""
+                                                data-msg-required="Please enter your name."
+                                                maxlength="100"
+                                                class="form-control mb-20 form-control_name contact__input contact__input_input contact__input_name"
+                                                placeholder="Fullname"
+                                                name="name"
+                                                id="name"
+                                                required
+                                              />
+                                        </div>
+                                        <div class="col-md-12">
+                                               <input
+                                                type="email"
+                                                value=""
+                                                data-msg-required="Please enter your email address."
+                                                data-msg-email="Please enter a valid email address."
+                                                maxlength="100"
+                                                class="form-control mb-20 contact__input contact__input_input"
+                                                name="email"
+                                                placeholder="Email address"
+                                                id="email"
+                                                required
+                                              />
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="row">
+                                      <div class="form-group">
+                                        <div class="col-md-12">
+                                                <div class="phone-container">
+                                                      <span class="mb-20 phone-addon">+1</span>
+                                                      <input 
+                                                      type="number"
+                                                      value=""
+                                                      pattern="[1-9]"
+                                                      onKeyDown="{checkIfNumber(event)}"
+                                                      data-msg-required="Please enter the subject."
+                                                      maxlength="10"
+                                                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                                      class="form-control mb-20 contact__input contact__input_phone contact__input_input"
+                                                      name="phone"
+                                                      id="phone"
+                                                      placeholder="Phone"
+                                                      required
+                                                        />
+                                              <div id="phone-error" class="error-message"></div>
+                                              </div>
+                                        </div>
+        
+                                         <div class="col-md-12">
+                                              <select
+                                                data-msg-required="Please enter the subject."
+                                               maxlength="100"
+                                               class="form-control mb-20 contact__input contact__input_input contact__input_select"
+                                               name="subject"
+                                               id="subject"
+                                               placeholder="Subject"
+                                               required>
+                                 <option class="d-none" value="" disabled selected>Are you looking for?</option>
+                                <option value="Player">Player</option>
+                                <option value="Distribution">Distribution</option>
+                                <option value="New Shop">New Shop</option>
+                                <option value="Existing Shop">Existing Shop</option> 
+                                        </select>
+                                       </div>
+                                      </div>
+                                </div>
+                                <div class="row">
+                                      <div class="form-group">
+                                        <div class="col-md-12">
+                                               <textarea
+                                                maxlength="5000"
+                                                data-msg-required="Please enter your message."
+                                                rows="10"
+                                                class="form-control contact__input"
+                                                name="message"
+                                                id="message"
+                                                placeholder="Message"
+                                                style="height: 145px;"
+                                              ></textarea>
+                                        </div>
+                                      </div>
+                                </div>
+                                
+                                <div class="terms">
+                                      <input name="check" required  class="terms__checkbox contact__input" id="checkbox1"  type="checkbox"/>
+                                      <label class="terms__label" for="checkbox1" style="font-size: 12px !important;">Subscription agreement and <a class="terms__anchor"  href="{% url 'main:terms-and-conditions' %}" >Terms and conditions</a>  agreement</label>
+                                      
+                                      </div>
+                              <div class="rechapta d-none">
+                                       <div  class="g-recaptcha"  data-callback="recaptchaCallback" data-sitekey="6LcxWx8iAAAAAOh_1FkGyizmjuJYncMg_vMa8qr-"></div>
+                              </div>
+
+                                <div class="row">
+                                      <div class="col-md-12 d-flex justify-content-center">
+                                              <button
+                                              style="width: 100% !important;"
+                                              type="submit"
+                                              disabled
+                                              value="Send Message"
+                                               class="btn btn-primary btn-lg btn-lg_sp btn__disabled"
+                                              data-loading-text="Loading..."
+                                        
+                                        >Submit</button>
+                                      </div>
+                                </div>
+                               </form>
+                      </div>	
+              
+        </div>
+        
+        </section>
+        <div class="container">
+                <div class="divider"></div>
+        </div>
+<div style="box-sizing: border-box;" class="container">
+
+        <div style="width: 100%;box-sizing: border-box !important;   box-shadow: 0 0 15px lightblue ; border-radius: 20px; border: 1px solid #FFB80D; background-color: #151234;"
+                role="main" class="main">
+
+                <div style="margin: 15px; padding: 25px;">
+                        <h2 style="text-align: center; color: #FFB80D; font-weight: 900;">
+                                Did You Know?
+                        </h2>
+                        <p style="text-align: center;">
+                                We've created a unique method of managing online casinos using advanced casino software
+                                to boost
+                                your profits. Thanks to this strategy, we can transform your casino business into a
+                                worthy
+                                competitor in the industry.
+                        </p>
+                </div>
+
+        </div>
+
+
+        <div>
+
+        </div>
+
+</div>
+<div class="container">
+        <div class="divider"></div>
+</div>
+<div style="box-sizing: border-box;" class="container">
+
+
+        <div style="width: 100%;box-sizing: border-box !important;" role="main" class="main">
+
+
+                <div class="about-outer" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                        <div>
+                                <h3>
+                                        1
+                                </h3>
+                                <h4>
+                                        Launch Your Casino in No Time
+                                </h4>
+                                <p>
+                                        When you sign up with King of Pop 777, we’ll help you streamline the process and
+                                        launch your casino to the public as fast as possible. Our dedicated team is
+                                        ready to help you grow your business using our advanced resources and system
+                                        integrations. 
+                                </p>
+
+                        </div>
+                        <div>
+                                <h3>
+                                        2
+
+                                </h3>
+                                <h4>
+                                        Get Advanced Security; Protect Your Clients
+                                </h4>
+                                <p>
+                                        We use data encryption to provide security services that guarantee the website
+                                        functions properly. Also, we ensure that your casino platform is secure from
+                                        hackers, as our solution has an activity tracking system, and more.
+                                </p>
+                        </div>
+                        <div>
+                                <h3>
+                                        3
+
+                                </h3>
+                                <h4>
+                                        Design Your Casino the Way You Want
+                                </h4>
+                                <p>
+                                        You can customize your casino’s interface with our white label casino software
+                                        solution. You can later make any changes you want using the tools available. Our
+                                        team is always available to help you.  </p>
+                        </div>
+                        <div style="width: 48.5%; margin: 10px auto;">
+                                <h3>
+                                        4
+
+                                </h3>
+                                <h4>
+                                        We Guarantee an Error-Free Casino Experience
+                                </h4>
+                                <p>
+                                        We ensure that your players don’t face any challenges when making deposits or
+                                        cashing out. We have a solid reputation for being error-free, and our support
+                                        team is always there to assist you if you run into any problems. </p>
+                        </div>
+                        <div style="width: 48.5%; margin: 10px auto; ">
+                                <h3>
+                                        5
+
+                                </h3>
+                                <h4>
+                                        Scale Up Your Business with King of Pop 777 </h4>
+                                <p>
+                                        Our software can accommodate your business growth whether you own a small
+                                        internet cafe or a sizable online casino. We can help you maintain stability and
+                                        user-friendliness no matter how much your business changes. </p>
+                        </div>
+
+                </div>
+
+
+
+
+
+        </div>
+
+
+        <div>
+
+        </div>
+
+</div>
+<div class="container">
+        <div class="divider"></div>
+</div>
+
+<div style="box-sizing: border-box;" class="container">
+
+        <div style="width: 100%;box-sizing: border-box !important;" role="main" class="main">
+
+
+                {{ about_content.content|safe }}
+
+
+        </div>
+</div>
+<section id="down-home">
+        <section class="container home">
+                <div style="padding: 15px auto; margin: 45px auto;">
+
+                        <h2 style="text-align: center  !important;" class="home__content">
+                                <div>
+
+                                        <span style="color: rgb(255, 183, 0);">
+                                                Join
+                                        </span> King of Pop 777 Now!
+                                </div>
+                        </h2>
+                        <div class="home__paragraphs">
+                                <p style="text-align: center !important;" class="home__paragraph">
+                                        If you want to succeed in your casino business, sign up today! We’ll use
+                                        advanced features to ensure your players get the best gaming experience!
+                                        Register now!
+                                </p>
+                                <!-- <p class="home__paragraph">
+            
+            
+          </p> -->
+                                <div style="text-align: center;">
+                                        <a class="text-white " style="text-decoration: none;" href="/">
+                                                <button class="customButton" style="font-size: 16px; color: #ffffff;
+           padding: 15px;
+            font-weight: 900;
+            background: rgba(218, 51, 10, 1);
+              border: none; border-radius: 5px;">
+                                                    Sign Up
+                                                </button>
+                                        </a>
+                                </div>
+                        </div>
+
+
+        </section>
+</section>
+<br><br>
+{% endblock %}

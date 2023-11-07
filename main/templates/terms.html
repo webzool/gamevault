@@ -1,0 +1,368 @@
+{% extends 'base.html' %} {% block title %}
+
+<title>Terms and Conditions of gamevaultcasino Casino Sweepstakes </title>
+<meta name="keywords" content="gamevaultcasino Casino">
+<meta name="description"
+    content=" King of Pop 777 offers simple-to-understand terms and regulations to make the site easy to use. Check out our Terms and Conditions page now.">
+
+<meta name="author" content="gamevaultcasino Casino">
+{% endblock title %} {% block content %}
+<section class="bannerSp">
+			 
+    <div style="margin-top: 25px !important;" class="container">
+    
+    <div id="landingContact-Text" class="row">
+      
+    
+      <div  style="display: block !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
+      <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/>
+    </div>
+    
+      <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+         <div class="alert alert-success hidden" id="contactSuccess">
+          <strong>Success!</strong> Your message has been sent to us.
+        </div>
+    
+        <div class="alert alert-danger hidden" id="contactError">
+          <strong>Error!</strong> There was an error sending your message.
+        </div>
+    
+        <p class="contact__textt">Are You Ready To Start Your Business? Whenever questions arise, feel free to contact us.</p>
+        <form action="{% url 'core:home' %}" method="POST" id="contactForm">
+          {% csrf_token %}
+          <div class="row">
+          
+          <div class="form-group">
+            <div class="col-md-12">
+             <input
+              type="text"
+              value=""
+              data-msg-required="Please enter your name."
+              maxlength="100"
+              class="form-control mb-20 form-control_name contact__input contact__input_input contact__input_name"
+              placeholder="Fullname"
+              name="name"
+              id="name"
+              required
+            />
+            </div>
+            <div class="col-md-12">
+             <input
+              type="email"
+              value=""
+              data-msg-required="Please enter your email address."
+              data-msg-email="Please enter a valid email address."
+              maxlength="100"
+              class="form-control mb-20 contact__input contact__input_input"
+              name="email"
+              placeholder="Email address"
+              id="email"
+              required
+            />
+            </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="form-group">
+            <div class="col-md-12">
+              <div class="phone-container">
+              <span class="mb-20 phone-addon">+1</span>
+              <input 
+              type="number"
+              value=""
+              pattern="[1-9]"
+              onKeyDown="{checkIfNumber(event)}"
+              data-msg-required="Please enter the subject."
+              maxlength="10"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              class="form-control mb-20 contact__input contact__input_phone contact__input_input"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+              required
+                />
+            <div id="phone-error" class="error-message"></div>
+            </div>
+            </div>
+    
+             <div class="col-md-12">
+            <select
+              data-msg-required="Please enter the subject."
+             maxlength="100"
+             class="form-control mb-20 contact__input contact__input_input contact__input_select"
+             name="subject"
+             id="subject"
+             placeholder="Subject"
+             required>
+           <option class="d-none" value="" disabled selected>Are you looking for?</option>
+          <option value="Player">Player</option>
+          <option value="Distribution">Distribution</option>
+          <option value="New Shop">New Shop</option>
+          <option value="Existing Shop">Existing Shop</option> 
+            </select>
+           </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="form-group">
+            <div class="col-md-12">
+             <textarea
+              maxlength="5000"
+              data-msg-required="Please enter your message."
+              rows="10"
+              class="form-control contact__input"
+              name="message"
+              id="message"
+              placeholder="Message"
+              style="height: 145px;"
+            ></textarea>
+            </div>
+          </div>
+          </div>
+          
+          <div class="terms">
+          <input name="check" required  class="terms__checkbox contact__input" id="checkbox1"  type="checkbox"/>
+          <label class="terms__label" for="checkbox1" style="font-size: 12px !important;">Subscription agreement and <a class="terms__anchor"  href="{% url 'main:terms-and-conditions' %}" >Terms and conditions</a>  agreement</label>
+          
+          </div>
+        <div class="rechapta d-none">
+           <div  class="g-recaptcha"  data-callback="recaptchaCallback" data-sitekey="6LcxWx8iAAAAAOh_1FkGyizmjuJYncMg_vMa8qr-"></div>
+        </div>
+  
+          <div class="row">
+          <div class="col-md-12 d-flex justify-content-center">
+            <button
+            style="width: 100% !important;"
+            type="submit"
+            disabled
+            value="Send Message"
+             class="btn btn-primary btn-lg btn-lg_sp btn__disabled"
+            data-loading-text="Loading..."
+            
+            >Submit</button>
+          </div>
+          </div>
+         </form>
+      </div>	
+    
+    </div>
+    
+    </section>
+    <div class="container">
+        <div class="divider"></div>
+</div>
+<div class="term">
+    <div class="container">
+        <br />
+        <br />
+        <br />
+
+        <h1>Terms and Conditions for gamevaultcasino Casino</h1>
+
+        <h2>Introduction</h2>
+
+        <p>
+            There are Terms and Conditions for using our website, King of Pop 777, which you can access at
+            <a href=" https://www.gamevaultcasino777.com."> https://www.gamevaultcasino777.com.</a> By using our website, you agree
+            to accept these Terms and Conditions.
+        </p>
+        <p>
+            Don't use our website if you disagree with them. You must be at least 18 years old to use this website. We
+            don't allow anyone under 18 to access our website.
+        </p>
+        <h2>Intellectual Property Rights</h2>
+
+        <p>
+            We and our licensors own all the intellectual property rights and content on this website, except the
+            content you own under these Terms and Conditions. You have a limited license to view the content only on our
+            website.
+        </p>
+
+
+
+
+        <h2>Restrictions</h2>
+
+        <p>
+
+            You’re not permitted to do the following on our website:
+            <br>
+        <ul class="terms__ul">
+            <li>
+                Sharing our content on other media or websites.
+            </li>
+            <li>
+                Selling, sublicensing, or making an effort to profit from our products.
+            </li>
+            <li>
+                Showing or performing our website material to the public.
+            </li>
+            <li>
+                Using our website in a way that damages it.
+            </li>
+            <li>
+                Using our website that goes against applicable laws and regulations or in a way that may cause harm to
+                any person, the Site, or business entity.
+            </li>
+            <li>
+                Attempting to collect, harvest, or extract information from our website.
+            </li>
+            <li>
+                Engaging in data harvesting, mining, extracting, or other similar activities on this Site.
+            </li>
+            <li>
+                Using our website for advertising or marketing.
+            </li>
+
+
+        </ul>
+        Some parts of our Site are restricted, and we can decide who can access them. All your user IDs and passwords on
+        this Site are highly secured. However, you must also keep them confidential.
+        </p>
+
+
+
+
+
+        <h2>Your Content</h2>
+
+        <p>
+            You grant us a non-exclusive, worldwide irrevocable, sub-licensable license to use, reproduce, publish,
+            adapt, translate, and distribute in all media the content you post on our website (such as text, images,
+            videos, and other materials).
+        </p>
+
+        <p>
+            You must use your content and not violate other third parties’ rights. King of Pop 777 reserves the right to
+            remove Your Content from our website at any moment without prior notice.
+        </p>
+
+
+
+
+
+
+        <h2>No warranties</h2>
+
+        <p>
+            Our website is provided as it is, and we don't make any warranties or representations related to this Site
+            or the content found on this website. Also, don’t interpret any content on this website as advice.
+        </p>
+
+
+        <h2>
+
+            Limitation of liability
+        </h2>
+
+        <p>
+            Under no circumstances will King of Pop 777 and its directors, officers, and employees be liable for
+            anything resulting from or connected to your use of this website, whether such liability is under a
+            contract.
+
+        </p>
+        <p>
+            Using this website doesn’t give rise to any direct, indirect, special, or consequential responsibility by
+            King of Pop 777, its officers, directors, or employees.
+        </p>
+
+
+        <h2>
+
+            Indemnification
+        </h2>
+
+        <p>
+            You agree to indemnify to the fullest extent King of Pop 777 from and against all costs, liabilities, causes
+            of action, demands, expenses, and damages that occur when you breach any of the provisions in these Terms
+            and Conditions.
+
+        </p>
+
+
+
+        <h2>
+            Severability
+
+        </h2>
+
+        <p>
+            If the provisions in these Terms become invalid under any applicable law, such provisions shall be removed,
+            which shall not affect the remaining provisions.
+
+        </p>
+
+
+
+        <h2>
+            Variation of Terms
+
+        </h2>
+
+        <p>
+
+            King of Pop 777 is allowed to revise these Terms at any time, and you agree to review these Terms regularly.
+        </p>
+
+
+
+        <h2>
+
+            Assignment
+        </h2>
+
+        <p>
+
+            The King of Pop 777 can freely transfer, sublet, and assign its rights and duties under these Terms without
+            receiving consent or notice. However, you can’t assign, transfer, or subcontract any of your rights or
+            obligations under these Terms in any other manner.
+        </p>
+
+
+
+        <h2>
+
+            Entire Agreement
+        </h2>
+
+        <p>
+
+            These Terms refer to the entire agreement between you and King of Pop 777 about your use of this Site. This
+            supersedes all prior agreements and understandings.
+        </p>
+
+
+
+        <h2>
+
+            Governing Law & Jurisdiction
+        </h2>
+
+        <p>
+            You consent to the non-exclusive jurisdiction of the state and federal courts located in the US to resolve
+            any disputes, and these Terms will be governed by and interpreted per the laws of the State of the US.
+
+        </p>
+        <p>
+            You agree to share your email address for promotions on other websites by accepting these Terms and
+            Conditions.
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+        <br />
+        <br />
+        <br />
+    </div>
+</div>
+
+{% endblock %}

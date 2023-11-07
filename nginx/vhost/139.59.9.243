@@ -1,0 +1,14 @@
+# auth_basic "Restricted Content";
+# auth_basic_user_file /home/gamevaultcasino/gamevaultcasino/nginx/.htpasswd;
+   
+location /static/ {
+    alias /gamevaultcasino/static/;
+}
+
+location /media/ {
+    alias /gamevaultcasino/media/;
+}
+
+location = /test {
+  return 302 /test2;
+}

@@ -1,0 +1,1103 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<style>
+    .games-wrapper {
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 3% auto;
+        flex-wrap: wrap;
+    }
+
+    .game-item {
+        width: 30%;
+        /* height: 279.600px; */
+        /* box-shadow: -3.828px -3.828px 6px 0 rgb(255 200 39 / 40%), 3px 5px 8px 0 rgb(255 82 1 / 20%); */
+        border: 2px solid rgb(255, 191, 0);
+        margin: 5px 5px;
+        box-shadow: 0px 0px 10 solid gold;
+        text-align: center;
+
+        border-radius: 20px;
+        background: inherit;
+        position: relative;
+        -webkit-transition: all ease .3s;
+        -moz-transition: all ease .3s;
+        transition: all ease .3s;
+        overflow: hidden;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+
+    .game-item::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(35, 39, 77, 1);
+        opacity: .9;
+        box-sizing: border-box;
+    }
+
+    .game-item .game-inner {
+
+        position: relative;
+        z-index: 1;
+    }
+
+    .game-item__thumb {
+        width: inherit;
+        /* height: 140px; */
+        margin: 0 auto 25px;
+        border: 1px solid rgba(255, 255, 255, .17);
+        border-radius: 7px;
+        background: inherit;
+        /* padding: 10px; */
+    }
+
+    .game-item__thumb img {
+
+        width: 100%;
+        object-fit: contain;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+
+    .game-content {
+        background-color: rgba(35, 39, 77, 1);
+    }
+
+    .game-content h4 {
+        font-size: 20px;
+        font-family: inherit;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .game-item:hover {
+        box-shadow: -3.828px -3.828px 6px 0 rgb(255, 191, 0), 3px 5px 8px 0 rgb(255, 191, 0);
+    }
+
+    @media (min-width: 1700px) {
+        .games-wrapper {
+            width: 100%;
+        }
+
+    }
+
+    @media (max-width: 1200px) {
+        .games-wrapper {
+            width: 100%;
+        }
+
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .games-wrapper {
+            width: 100%;
+            display: flex;
+        }
+
+        .game-item {
+            margin: 25px 25px;
+            width: 60%;
+        }
+
+    }
+
+    @media only screen and (max-width: 760px) {
+        .games-wrapper {
+            width: 100%;
+            display: flex;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .games-wrapper {
+            width: 100%;
+            display: flex;
+        }
+
+    }
+</style>
+<style>
+    /* .container {
+                             width: 100%;
+                         } */
+    .description p {
+        text-align: justify;
+    }
+
+    #first {
+        font-size: 50px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    .container p {
+        font-size: 17px;
+    }
+
+
+
+    .dsc_apps {
+
+        margin: auto 0;
+        text-align: center;
+    }
+
+
+
+
+
+    @keyframes neon {
+
+        10% {
+            box-shadow: -4px -4px 15px #9d65f1, 2px 2px 3 10px #65f18a;
+
+        }
+
+        25% {
+            box-shadow: -4px -4px 10px rgb(43, 95, 226), 5px 5px 15px rgb(238, 25, 220);
+
+        }
+
+        50% {
+            box-shadow: -4px -4px 10px rgb(255, 251, 11), 5px 5px 15px rgb(137, 80, 0)
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .description h1 {
+        margin: 25px auto;
+    }
+
+    .game-heading {
+        width: 100%;
+        text-align: center;
+        margin: 15px 0 10px 0;
+
+
+    }
+    .bannerSp{
+			background-image: url('/static/img/GamesBg.webp') !important;
+	
+		}
+
+
+    .outer-flex {
+        /* border: 4px solid goldenrod; */
+        border-radius: 15px;
+        /* box-shadow: -1px -1px 6px 0 #ffc107, 1px 1px 8px 0 #ffc107; */
+        /* animation: move infinite 7s; */
+        box-sizing: border-box;
+    }
+
+
+    @keyframes move {
+
+        10% {
+            box-shadow: -5px -5px 15px rgb(242, 0, 255), 5px 5px 35px #b565f1;
+
+        }
+
+        25% {
+            box-shadow: -5px -5px 26px blueviolet, 5px 5px 45px rgb(238, 25, 217);
+
+        }
+
+        50% {
+            box-shadow: -5px -5px 26px rgb(59, 2, 55), 5px 5px 26px rgb(62, 0, 59)
+        }
+
+
+    }
+
+    .game-flex {
+        display: flex;
+        width: 95%;
+        box-sizing: border-box;
+        justify-content: space-between;
+        margin: 20px auto;
+
+    }
+
+    #down-home {
+        background-image: url("/static/img/Big_Card.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .inner-flex {
+        display: flex;
+        box-sizing: border-box;
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .inner-flex p {
+        text-align: left;
+        margin: 10px 0;
+
+    }
+
+    #reverse-p {
+        text-align: left;
+        margin: 10px 0;
+
+    }
+
+    .game-images img {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    }
+
+
+
+
+
+
+
+
+    .game-images {
+        margin: auto;
+        padding: auto;
+    }
+
+    .game-images .game-logo {
+        width: 95% !important;
+    }
+
+    .game-logo {
+        padding-top: 0;
+    }
+
+
+
+    .inner-container {
+        margin: 15px;
+    }
+
+
+
+    @media (max-width:1200px) {
+
+        .download-apps {
+            flex-direction: column;
+
+        }
+
+        .apps {
+            margin: 20px auto;
+        }
+    }
+
+
+    @media (max-width: 1000px) {
+
+
+        .game-flex {
+            width: 100%;
+        }
+
+        .apps {
+            margin: 25px auto;
+        }
+
+        .inner p {
+            padding: 8px 0;
+        }
+
+
+        .download-apps {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            margin: 35px auto;
+        }
+
+        .inner img,
+        .qr-div img {
+            height: 82%;
+
+        }
+
+        .description {
+            margin: 25px 0;
+        }
+
+
+
+
+
+
+
+
+        .game-images img {
+            width: 95%;
+            height: fit-content;
+            align-items: center;
+        }
+
+
+        .inner-flex p,
+        #reverse-p {
+            font-size: 16px;
+
+        }
+
+    }
+
+    @media (max-width: 870px) {
+        .dsc_apps {
+            margin: 15px;
+        }
+
+        .inner-flex {
+            margin: 15px auto;
+        }
+
+        .game-flex {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+        }
+
+        .inner img {
+            height: 90%;
+        }
+
+        #reverse-game-flex {
+            flex-direction: column-reverse;
+
+        }
+
+        .inner-flex p,
+        #reverse-p {
+            text-align: center;
+        }
+
+
+        .description h1 {
+            text-align: center;
+            font-size: 27px;
+        }
+
+        .description p {
+            font-size: 16px;
+        }
+
+        .dsc_apps h1 {
+            font-size: 27px;
+        }
+
+        .inner-flex {
+            width: 80%;
+        }
+
+
+
+
+
+        .dsc_apps h1 {
+            font-size: 32px;
+        }
+
+
+
+
+        .description h1 {
+            margin: 45px auto;
+        }
+    }
+
+    @media (max-width: 601px) {
+        .game-images .game-logo {
+            width: 99% !important;
+        }
+
+
+
+
+
+        #first {
+            font-size: 36px;
+        }
+
+
+
+
+
+        .inner-flex {
+            padding: auto;
+        }
+
+    }
+
+    @media (max-width: 450px) {
+
+
+
+
+
+
+
+
+
+
+        .inner {
+            width: 100%;
+            height: 60px;
+            margin: 0 auto;
+        }
+
+
+        .inner p {
+            font-size: 14px;
+
+        }
+
+        .inner span {
+            font-size: 12px;
+        }
+    }
+</style>
+<title>Enjoy the Best Sweepstakes Games in gamevaultcasino Casino</title>
+<meta name="keywords" content={{game_content.meta_keywords}}>
+<meta name="description" content={{game_content.meta_description}}>
+{% endblock title %}
+
+
+{% block content %}
+<section  class="bannerSp">
+			 
+    <div style="margin-top: 25px !important;"   class="container">
+    
+          <div id="landingContact-Text" class="row">
+            
+          
+            <div  style="display: block !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
+                  <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/>
+          </div>
+          
+            <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+                           <div class="alert alert-success hidden" id="contactSuccess">
+                            <strong>Success!</strong> Your message has been sent to us.
+                          </div>
+          
+                          <div class="alert alert-danger hidden" id="contactError">
+                            <strong>Error!</strong> There was an error sending your message.
+                          </div>
+          
+                          <form action="{% url 'core:home' %}" method="POST" id="contactForm">
+                                  {% csrf_token %}
+                            <div class="row">
+                                  
+                                  <div class="form-group">
+                                    <div class="col-md-12">
+                                           <input
+                                            type="text"
+                                            value=""
+                                            data-msg-required="Please enter your name."
+                                            maxlength="100"
+                                            class="form-control mb-20 form-control_name contact__input contact__input_input contact__input_name"
+                                            placeholder="Fullname"
+                                            name="name"
+                                            id="name"
+                                            required
+                                          />
+                                    </div>
+                                    <div class="col-md-12">
+                                           <input
+                                            type="email"
+                                            value=""
+                                            data-msg-required="Please enter your email address."
+                                            data-msg-email="Please enter a valid email address."
+                                            maxlength="100"
+                                            class="form-control mb-20 contact__input contact__input_input"
+                                            name="email"
+                                            placeholder="Email address"
+                                            id="email"
+                                            required
+                                          />
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="row">
+                                  <div class="form-group">
+                                    <div class="col-md-12">
+                                            <div class="phone-container">
+                                                  <span class="mb-20 phone-addon">+1</span>
+                                                  <input 
+                                                  type="number"
+                                                  value=""
+                                                  pattern="[1-9]"
+                                                  onKeyDown="{checkIfNumber(event)}"
+                                                  data-msg-required="Please enter the subject."
+                                                  maxlength="10"
+                                                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                                  class="form-control mb-20 contact__input contact__input_phone contact__input_input"
+                                                  name="phone"
+                                                  id="phone"
+                                                  placeholder="Phone"
+                                                  required
+                                                    />
+                                          <div id="phone-error" class="error-message"></div>
+                                          </div>
+                                    </div>
+    
+                                     <div class="col-md-12">
+                                          <select
+                                            data-msg-required="Please enter the subject."
+                                           maxlength="100"
+                                           class="form-control mb-20 contact__input contact__input_input contact__input_select"
+                                           name="subject"
+                                           id="subject"
+                                           placeholder="Subject"
+                                           required>
+                             <option class="d-none" value="" disabled selected>Are you looking for?</option>
+                            <option value="Player">Player</option>
+                            <option value="Distribution">Distribution</option>
+                            <option value="New Shop">New Shop</option>
+                            <option value="Existing Shop">Existing Shop</option> 
+                                    </select>
+                                   </div>
+                                  </div>
+                            </div>
+                            <div class="row">
+                                  <div class="form-group">
+                                    <div class="col-md-12">
+                                           <textarea
+                                            maxlength="5000"
+                                            data-msg-required="Please enter your message."
+                                            rows="10"
+                                            class="form-control contact__input"
+                                            name="message"
+                                            id="message"
+                                            placeholder="Message"
+                                            style="height: 145px;"
+                                          ></textarea>
+                                    </div>
+                                  </div>
+                            </div>
+                            
+                            <div class="terms">
+                                  <input name="check" required  class="terms__checkbox contact__input" id="checkbox1"  type="checkbox"/>
+                                  <label class="terms__label" for="checkbox1" style="font-size: 12px !important;">Subscription agreement and <a class="terms__anchor"  href="{% url 'main:terms-and-conditions' %}" >Terms and conditions</a>  agreement</label>
+                                  
+                                  </div>
+                          <div class="rechapta d-none">
+                                   <div  class="g-recaptcha"  data-callback="recaptchaCallback" data-sitekey="6LcxWx8iAAAAAOh_1FkGyizmjuJYncMg_vMa8qr-"></div>
+                          </div>
+
+                            <div class="row">
+                                  <div class="col-md-12 d-flex justify-content-center">
+                                          <button
+                                          style="width: 100% !important;"
+                                          type="submit"
+                                          disabled
+                                          value="Send Message"
+                                           class="btn btn-primary btn-lg btn-lg_sp btn__disabled"
+                                          data-loading-text="Loading..."
+                                    
+                                    >Submit</button>
+                                  </div>
+                            </div>
+                           </form>
+                  </div>	
+          
+    </div>
+    
+    </section>
+
+    <div class="container">
+        <div class="divider"></div>
+</div>
+<div class="container">
+    <div role="main" class="main">
+        {{ game_content.content|safe }}
+    </div>
+
+
+
+    <h1 style="color: white; font-weight: 900; text-align: center;">
+        <span style="color: rgb(255, 183, 0);">
+
+            Top Games
+        </span> King Of Pop 777 Games
+    </h1>
+
+    <div class="games-wrapper">
+
+        <div class="game-item">
+            <div class="game-inner">
+                <div class="game-item__thumb">
+                    <img src="/static/img/pic.png" alt="none">
+                </div>
+                <div class="game-content">
+                    <h4 class="Dragon">River Monster</h4>
+                </div>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-inner">
+                <div class="game-item__thumb">
+         <img src="/static/img/pic.png" alt="none">                </div>
+                <div class="game-content">
+                    <h4 class="fish">Ocean Monster</h4>
+                </div>
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-inner">
+                <div class="game-item__thumb">
+
+         <img src="/static/img/pic.png" alt="none">                </div>
+                <div class="game-content">
+                    <h4 class="treasure">Golden Toad</h4>
+                </div>
+
+            </div>
+        </div>
+        <div class="game-item">
+            <div class="game-inner">
+                <div class="game-item__thumb">
+
+         <img src="/static/img/pic.png" alt="none">                </div>
+                <div class="game-content">
+                    <h4 class="meteor-shower">Meteor Shower</h4>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="container">
+        <div class="divider"></div>
+    </div>
+    <div class="outer-flex">
+        <div class="inner-container">
+            <!-- <div class="game-heading">
+                <h2>
+       
+                Plinko: Gameplay
+                </h2>
+            </div> -->
+
+
+
+            <div id="reverse-game-flex" class="game-flex">
+                <div style="display: block !important;" class="inner-flex">
+                    <div class="game-heading">
+                        <h2 style="color: #03CBFD;">
+
+                            <b> Spartacus</b>
+                        </h2>
+                    </div>
+                    <p id="reverse-p">
+                        The Spartacus online slot is a unique casino game with two sets of reels, one with a 5x4 layout
+                        and the other with a 5x12 layout. Join the legendary gladiator from the Roman Circus in his
+                        quest to become the top gladiator. 
+
+                    <p id="reverse-p">
+
+                        You get 100 paylines, numerous bonus features, and a Spartacus jackpot that can pay out 10 times
+                        your initial wager for five wild symbols. Your players will surely love this King of Pop game. 
+                    </p>
+                </div>
+                <div class="inner-flex">
+
+
+                    <div class="game-images"> <img loading="lazy" class="game-logo" src="/static/img/BannerRight.png"
+                            alt="Spartacus-game"> </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+            <div class="game-flex">
+
+                <div class="inner-flex">
+                    <div style="height: 100%;width: 100%;" class="game-images">
+                        <img loading="lazy" class="game-logo" src="/static/img/BannerRight.png" alt="Spartacus">
+                    </div>
+                </div>
+                <div style="display: block !important;" class="inner-flex">
+                    <div class="game-heading">
+                        <h2 style="color: #FFB80D;">
+
+                            <b> Michael Jackson Slot Machine</b>
+                        </h2>
+                    </div>
+                    <p>
+                        Michael Jackson slot machine online is a five-reel, 25-payline video slot dedicated to the
+                        legendary performer Micheal Jackson. You can set your wagers from 0.40 and 80 with the arrows
+                        button and then spin the reels. </p>
+
+                    <p>
+                        Two to five random Moonwalk Wilds can appear on any reel other than reel 1 in the base game.
+                        These Wilds can replace any other symbol except Bonus and Jackpot symbols. 
+
+                    </p>
+                    <p>
+                        To start the Wheel Bonus feature, you must land a Bonus symbol on reels 2, 3, or 4 inside 1
+                        position. 
+
+                    </p>
+                    <p>
+                        You can win free games or credits with a Multiplier Wheel spin by spinning the wheel. The
+                        multipliers are between x2 and x10.
+
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+
+            <div id="reverse-game-flex" class="game-flex">
+                <div style="display: block;" class="inner-flex">
+                    <h2 style="color: #03CBFD;">
+
+                        <b> Lucky Duck</b>
+                    </h2>
+                    <p id="reverse-p">
+                        Lucky Duck provides fantastic rewards and lots of fun. You can fully immerse yourself in the
+                        Asian sceneries with a bright Chinese theme. 
+                    </p>
+                    <p id="reverse-p">
+                        The game depicts the country's natural beauty and includes several classic slot game themes.
+                        This adds to the excitement with the many engaging features the game has.
+                    </p>
+                    <p id="reverse-p">
+                        The graphics in the game are stunning. Although the game feels slightly more vintage, this gives
+                        it a classic charm. There are fewer flashy effects, but the incredible designs make up for it!
+                    </p>
+                </div>
+                <div class="inner-flex">
+
+
+                    <div class="game-images"> <img loading="lazy" class="game-logo"
+                            src="/static/img/new-games/Plinko3.webp" alt="plinko-game"> </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+            <div class="game-flex">
+
+                <div class="inner-flex">
+                    <div class="game-images"> <img loading="lazy" class="game-logo"
+                            src="/static/img/new-games/Plinko2.webp" alt="jplinko-game"> </div>
+                </div>
+                <div style="display: block;" class="inner-flex">
+                    <h2 style="color: #FFB80D;">
+
+                        <b> God of Wealth</b>
+                    </h2>
+
+                    <p> God of Wealth is a Japanese-inspired video slot that blends wealth with tranquility. It gives
+                        players a fun gaming experience with five reels, 25 paylines, and the chance to win a
+                        progressive jackpot. 
+
+                    </p>
+
+                    <p>
+
+                        The theme of God of Wealth will immerse your players in a peaceful environment. The theme offers
+                        a beautiful view of a tranquil lake, thick green trees, and adjacent temples.
+                    </p>
+                    <p>
+
+                        The God of Wealth serves as the game's Wild symbol. When you land five of these in the active
+                        payline, you get 10,000 coins. This symbol only shows up on reel three and can replace all
+                        symbols other than the golden ingot.
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+
+            <div id="reverse-game-flex" class="game-flex">
+                <div style="display: block;" class="inner-flex">
+                    <h2 style="color: #03CBFD;">
+
+                        <b> Ultimate Fire Link</b>
+                    </h2>
+                    <p id="reverse-p">
+                        Ultimate Fire Link is one of the games that stand out from others. For example, instead of the
+                        typical 5x3 reel set, it has a 5x4 reel setup that offers a unique payout structure. Players
+                        need a four-fireball trigger, and it offers a unique gaming experience. 
+                    </p>
+
+                    <p id="reverse-p">
+                         
+
+                        The fireball bonus has a novel method that initially doubles the grid and then unlocks new rows
+                        for every four balls gathered. Plus, all the game levels come with progressives, giving players
+                        a balanced progressive system.
+                    </p>
+                </div>
+                <div class="inner-flex">
+
+
+                    <div class="game-images"> <img loading="lazy" class="game-logo"
+                            src="/static/img/new-games/Plinko3.webp" alt="plinko-game"> </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+            <div class="game-flex">
+
+                <div class="inner-flex">
+                    <div class="game-images"> <img loading="lazy" class="game-logo"
+                            src="/static/img/new-games/Plinko2.webp" alt="jplinko-game"> </div>
+                </div>
+                <div style="display: block;" class="inner-flex">
+                    <h2 style="color: #FFB80D;">
+
+                        <b> Lucky Witch</b>
+                    </h2>
+
+                    <p> Lucky Witch is a five-reel, 15-pay line that focuses on witchcraft and mystery with captivating
+                        graphics and immersive sound. Black cats, gargoyles, potions, and other images are used as
+                        symbols. 
+
+
+
+                    </p>
+
+                    <p>
+
+                        Your players can enjoy features like the Lucky Witch wild sign, the Potion scatter symbol, free
+                        spins, and the Mystery bonus game.
+                    </p>
+                    <p>
+
+                        The Lucky Witch symbol acts as a wild, doubles rewards, and builds stacks of wild symbols. The
+                        potion bottle acts as the scatter and can retrigger 13 free spins. 
+                    </p>
+                    <p>
+                        The Mystery bonus game triggers during free spins.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+
+
+
+
+            <div id="reverse-game-flex" class="game-flex">
+                <div style="display: block;" class="inner-flex">
+                    <h2 style="color: #03CBFD;">
+
+                        <b> Cash Machine</b>
+                    </h2>
+                    <p id="reverse-p">
+                        Cash Machine offers a unique stepper game with a theme based on banknotes. It’s simple to play
+                        and resembles a scratch card in that you win according to what appears on the payline. There are
+                        up to 32 winning combinations with a traditional 3x1 slot configuration. 
+
+
+                    </p>
+
+                    <p id="reverse-p">
+                         
+                        Respins are one of the unique Cash Machine extra features that create excitement. Furthermore,
+                        it supports mobile devices for gaming on the go.
+                    </p>
+                </div>
+                <div class="inner-flex">
+
+
+                    <div class="game-images"> <img loading="lazy" class="game-logo"
+                            src="/static/img/new-games/Plinko3.webp" alt="plinko-game"> </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+
+
+            <div class="game-flex">
+
+                <div class="inner-flex">
+                    <div class="game-images"> <img loading="lazy" class="game-logo"
+                            src="/static/img/new-games/Plinko2.webp" alt="jplinko-game"> </div>
+                </div>
+                <div style="display: block;" class="inner-flex">
+                    <h2 style="color: #FFB80D;">
+
+                        <b> Royal Poker</b>
+                    </h2>
+
+                    <p> All players in Royal Poker receive 5 cards at the beginning of the game after the dealer places
+                        an ante bet. The game aims to outdo the dealer by producing a stronger hand. The rank of the
+                        player's hand determines how much money they win. 
+
+
+
+                    </p>
+
+                    <p>
+                        The usual hand rankings include pair, two pair, three of a kind, straight, flush, full house,
+                        four of a kind, straight flush, and the royal flush.
+                    </p>
+                    <p>
+
+                        Players can make a second ante bet if your first hand doesn't meet their expectations. With this
+                        wager, they can receive a sixth card or exchange 2 to 5 of your current cards for new ones.
+                        Choosing the sixth card practically amounts to playing two different hands. 
+                    </p>
+                    <p>
+                        The initial five cards you were dealt make up your first hand, while any four cards plus the
+                        newly obtained sixth card make up your second hand. </p>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+
+
+
+            <div id="reverse-game-flex" class="game-flex">
+                <div style="display: block;" class="inner-flex">
+                    <h2 style="color: #03CBFD;">
+
+                        <b> Merry Christmas Megaways</b>
+                    </h2>
+                    <p id="reverse-p">
+                        Merry Christmas Megaways provides merry entertainment with Megaways features like mystery
+                        symbols and free spins with a progressive win multiplier. The six-reel slot in a warm living
+                        room offers up to 117,649 ways to win. 
+
+
+                    </p>
+
+                    <p id="reverse-p">
+                         
+                        You can play regularly or turn on the Fortune Bet for more bonus possibilities. With a 95.5%
+                        return value, the game is quite volatile. Santa is the highest-value symbol. Your players will
+                        enjoy the festive winnings with Merry Christmas Megaways.
+                    </p>
+                </div>
+                <div class="inner-flex">
+
+
+                    <div class="game-images"> <img loading="lazy" class="game-logo"
+                            src="/static/img/new-games/Plinko3.webp" alt="plinko-game"> </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="divider"></div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+<section id="down-home">
+    <section class="container home">
+        <div style="padding: 15px auto; margin: 45px auto;">
+
+            <h2 style="text-align: center  !important;" class="home__content">
+                <div>
+                    <span style="color: rgb(255, 183, 0);">
+                        Sign Up
+                    </span> with King of Pop 777 Now!
+                </div>
+
+            </h2>
+            <div class="home__paragraphs">
+                <p style="text-align: center !important;" class="home__paragraph">
+                    We know that your casino’s success goes beyond just offering great games. It’s also about having the
+                    right resources and tools to manage and evaluate your casino’s performance. 
+                </p>
+                <p style="text-align: center !important;" class="home__paragraph">
+                    King of Pop 777 offers the most powerful, flexible, and user-friendly casino administrative
+                    interface to sustain growth. Register with us today and turn your casino business into a profitable
+                    one!  </p>
+
+                <div style="text-align: center;">
+                    <a class="text-white " style="text-decoration: none;" href="/">
+                        <button class="customButton" style="font-size: 16px; color: #ffffff;
+       padding: 15px;
+        font-weight: 900;
+        background: rgba(218, 51, 10, 1);
+          border: none; border-radius: 5px;">
+                            Sign Up Now
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+
+    </section>
+</section>
+{% endblock %}

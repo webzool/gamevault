@@ -1,0 +1,337 @@
+{% extends 'base.html' %} {% block title %}
+
+<title>Privacy Policy of the gamevaultcasino Casino Sweepstakes </title>
+<meta name="keywords" content="gamevaultcasino Casino">
+<meta name="description"
+  content="This Privacy Policy governs how King of Pop 777 collects, uses, maintains, and discloses information from Users. Find out more.  ">
+
+<meta name="author" content="gamevaultcasino Casino">
+{% endblock title %}
+{% block content %}
+
+<section class="bannerSp">
+			 
+  <div style="margin-top: 25px !important;" class="container">
+  
+  <div id="landingContact-Text" class="row">
+    
+  
+    <div  style="display: block !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
+    <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/>
+  </div>
+  
+    <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+       <div class="alert alert-success hidden" id="contactSuccess">
+        <strong>Success!</strong> Your message has been sent to us.
+      </div>
+  
+      <div class="alert alert-danger hidden" id="contactError">
+        <strong>Error!</strong> There was an error sending your message.
+      </div>
+  
+      <p class="contact__textt">Are You Ready To Start Your Business? Whenever questions arise, feel free to contact us.</p>
+      <form action="{% url 'core:home' %}" method="POST" id="contactForm">
+        {% csrf_token %}
+        <div class="row">
+        
+        <div class="form-group">
+          <div class="col-md-12">
+           <input
+            type="text"
+            value=""
+            data-msg-required="Please enter your name."
+            maxlength="100"
+            class="form-control mb-20 form-control_name contact__input contact__input_input contact__input_name"
+            placeholder="Fullname"
+            name="name"
+            id="name"
+            required
+          />
+          </div>
+          <div class="col-md-12">
+           <input
+            type="email"
+            value=""
+            data-msg-required="Please enter your email address."
+            data-msg-email="Please enter a valid email address."
+            maxlength="100"
+            class="form-control mb-20 contact__input contact__input_input"
+            name="email"
+            placeholder="Email address"
+            id="email"
+            required
+          />
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <div class="phone-container">
+            <span class="mb-20 phone-addon">+1</span>
+            <input 
+            type="number"
+            value=""
+            pattern="[1-9]"
+            onKeyDown="{checkIfNumber(event)}"
+            data-msg-required="Please enter the subject."
+            maxlength="10"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            class="form-control mb-20 contact__input contact__input_phone contact__input_input"
+            name="phone"
+            id="phone"
+            placeholder="Phone"
+            required
+              />
+          <div id="phone-error" class="error-message"></div>
+          </div>
+          </div>
+  
+           <div class="col-md-12">
+          <select
+            data-msg-required="Please enter the subject."
+           maxlength="100"
+           class="form-control mb-20 contact__input contact__input_input contact__input_select"
+           name="subject"
+           id="subject"
+           placeholder="Subject"
+           required>
+         <option class="d-none" value="" disabled selected>Are you looking for?</option>
+        <option value="Player">Player</option>
+        <option value="Distribution">Distribution</option>
+        <option value="New Shop">New Shop</option>
+        <option value="Existing Shop">Existing Shop</option> 
+          </select>
+         </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+           <textarea
+            maxlength="5000"
+            data-msg-required="Please enter your message."
+            rows="10"
+            class="form-control contact__input"
+            name="message"
+            id="message"
+            placeholder="Message"
+            style="height: 145px;"
+          ></textarea>
+          </div>
+        </div>
+        </div>
+        
+        <div class="terms">
+        <input name="check" required  class="terms__checkbox contact__input" id="checkbox1"  type="checkbox"/>
+        <label class="terms__label" for="checkbox1" style="font-size: 12px !important;">Subscription agreement and <a class="terms__anchor"  href="{% url 'main:terms-and-conditions' %}" >Terms and conditions</a>  agreement</label>
+        
+        </div>
+      <div class="rechapta d-none">
+         <div  class="g-recaptcha"  data-callback="recaptchaCallback" data-sitekey="6LcxWx8iAAAAAOh_1FkGyizmjuJYncMg_vMa8qr-"></div>
+      </div>
+
+        <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+          <button
+          style="width: 100% !important;"
+          type="submit"
+          disabled
+          value="Send Message"
+           class="btn btn-primary btn-lg btn-lg_sp btn__disabled"
+          data-loading-text="Loading..."
+          
+          >Submit</button>
+        </div>
+        </div>
+       </form>
+    </div>	
+  
+  </div>
+  
+  </section>
+  <div class="container">
+    <div class="divider"></div>
+</div>
+<div class="term">
+  <div class="container">
+    <br />
+    <br />
+    <br />
+
+    <h1>PRIVACY POLICY</h1>
+
+
+    <p>
+      This Privacy Policy explains how King of Pop 777 manages your information. It covers the information we collect
+      from users (User) who visit our website (Site) and how we use it. This policy is important as it applies to all
+      products and services we offer at <a href="https://gamevaultcasino.com.">https://gamevaultcasino.com.</a>
+    </p>
+
+    <h2>Personal Information</h2>
+
+    <p>
+      You may get personal information in different ways, such as by visiting our Site, subscribing to our newsletter,
+      placing an order, responding to a survey, or using any of our services. We may also request your name, email,
+      address, phone number, and credit card information.
+    </p>
+
+    <p>
+      However, you can browse our website without providing any personal information to us. We only get it if you
+      voluntarily give it to us. But this might limit what you can do on our Site.
+    </p>
+    <h2>Non-Personal Information</h2>
+
+    <p>
+      When you use our Site, we may also collect non-personal information. This may include the type of computer you
+      use, your web browser, and technical information about how you connected to our site, such as your internet
+      connection provider or operating system.
+    </p>
+
+    <h2>Cookies</h2>
+
+    <p>
+      We may use cookies to improve your experience on our Site. Your web browser stores files called cookies on your
+      computer to remember your preferences or collect data about you. You can configure your web browser to decline
+      cookie access or to notify you when one is being sent. However, this action may cause some features on the Site
+      not to function properly.
+    </p>
+
+    <h2>How We Use Your Information</h2>
+
+    <p>
+      <b>Improve Customer Support:</b> Your information helps us better help you by responding to your queries and
+      meeting your
+      requirements.
+    </p>
+    <p>
+
+      <b>Personalize Your Experience:</b> We analyze all of the data to understand better how you use our Site and its
+      resources and to give you a more customized experience.
+
+    </p>
+    <p>
+
+      <b>Improve our website:</b> Your feedback helps us improve our products and services.
+    </p>
+    <p>
+      <b>Process payments:</b> We only use the information you provide to fulfill your order. If it's not necessary to
+      provide
+      the service, we won't disclose this to outside parties.
+    </p>
+    <p>
+      <b> Run a promotion, survey, contest, or other Site features:</b> We provide information on things you agreed to
+      receive
+      to run promotions, contests, surveys, and other site features.
+    </p>
+    <p>
+      <b> To send you emails:</b> We use your email to send you order updates or answer your questions. If you choose to
+      join
+      our mailing list, you’ll receive emails with company news, updates, and more.
+    </p>
+    <p>
+      You can unsubscribe from these emails by clicking the link at the bottom of each one or by contacting us through
+      our website if you prefer.
+    </p>
+    <!-- <p>
+      gamevault-casino.com may collect and use Users personal information for the following purposes:
+      <br>
+
+    <ul class="terms__ul">
+      <li>
+        – To improve customer service
+        Information you provide helps us respond to your customer service requests and support needs more efficiently.
+      </li>
+
+      <li>
+        – To personalize user experience
+        We may use information in the aggregate to understand how our Users as a group use the services and resources
+        provided on our Site.
+      </li>
+
+      <li>
+        – To improve our Site
+        We may use feedback you provide to improve our products and services.
+      </li>
+
+      <li>
+        – To process payments
+        We may use the information Users provide about themselves when placing an order only to provide service to that
+        order. We do not share this information with outside parties except to the extent necessary to provide the
+        service.
+      </li>
+
+      <li>
+        – To run a promotion, contest, survey or other Site feature
+        To send Users information they agreed to receive about topics we think will be of interest to them.
+      </li>
+
+
+      <li>
+        – To send periodic emails
+        We may use the email address to send User information and updates pertaining to their order. It may also be used
+        to respond to their inquiries, questions, and/or other requests. If User decides to opt-in to our mailing list,
+        they will receive emails that may include company news, updates, related product or service information, etc. If
+        at any time the User would like to unsubscribe from receiving future emails, we include detailed unsubscribe
+        instructions at the bottom of each email or User may contact us via our Site.
+      </li>
+
+    </ul>
+
+    </p> -->
+
+    <h2>How We Keep Your Information Safe</h2>
+
+    <p>
+
+      We take precautions to ensure the security of your information. We carefully collect, store, and manage your data
+      to prevent anyone from accessing it improperly or changing it.
+
+    </p>
+    <p>
+      We secure your personal information, passwords, transaction information, and data on our Site. King of Pop 777
+      transmits sensitive information securely, such as when you enter your data on our website.
+    </p>
+    <p>
+
+      We use advanced digital signatures and SSL encryption to protect your data from hackers. Our website complies with
+      PCI security standards to provide a secure environment.
+
+    </p>
+    <h2>Sharing your personal information</h2>
+
+    <p>We don’t trade, sell, or rent your personal information to third parties. We may share aggregate data (such as
+      statistics) about our users, but it won't be associated with personal identification information.</p>
+    <p>
+      We may share this information with our clients, trusted affiliates, and advertising, but we’ll only share any
+      personal information with your consent.
+    </p>
+    <p>
+      For tasks like distributing newsletters or surveys, we may use outside assistance. If we do, we will only do so if
+      you permit us to share your information with them.
+    </p>
+
+    <h2>Compliance with children’s online privacy protection act</h2>
+
+    <p>Children's privacy is crucial to us. We never collect or keep information from children under the age of 13. We
+      don’t permit children under 13 on our Site.</p>
+
+    <h2>Changes to this privacy policy</h2>
+
+    <p>We may occasionally change our Privacy Policy. If we do, we'll notify you on the home page of our website and
+      change the date at the bottom of this page. Visit this page occasionally to see if there have been any updates.
+      You acknowledge and agree to stay updated with these changes when you use our Site.</p>
+
+    <h2>Your Agreement to These Terms</h2>
+
+    <p>You accept this policy and our terms of service if you use our website. Don’t use our Site if you disagree with
+      this policy. After we change this policy, your continued use of the site constitutes your acceptance of those
+      changes.</p>
+
+    <br />
+    <br />
+    <br />
+  </div>
+
+  {% endblock %}
+</div>

@@ -1,0 +1,1647 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- <script src="https://kit.fontawesome.com/c3726104d6.js" crossorigin="anonymous" defer></script> -->
+
+<!-- The Modal -->
+<!-- <div id="myModal" class="modal">
+Modal content
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <a target="_blank" href="https://bitbetwin.cc/registration/">
+      <picture>
+        <source type="image/webp" srcset="{% static 'img/bbw-signup-5.webp' %}" />
+        <img src="{% static 'img/bbw-signup-5.png' %}" alt="photo"> 
+      </picture>	
+    </a>
+  </div>
+</div> -->
+<style>
+  .games-wrapper {
+
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 3% auto;
+      flex-wrap: wrap;
+  }
+
+  .game-item {
+      width: 30%;
+      /* height: 279.600px; */
+      /* box-shadow: -3.828px -3.828px 6px 0 rgb(255 200 39 / 40%), 3px 5px 8px 0 rgb(255 82 1 / 20%); */
+      border: 2px solid rgb(255, 191, 0);
+     margin-top:15px ;
+     margin-bottom: 15px;
+      box-shadow: 0px 0px 10 solid gold;
+      text-align: center;
+      /* left: 50%;
+      transform: translateX(-50%); */
+      border-radius: 20px;
+      background: inherit;
+      position: relative;
+      -webkit-transition: all ease .3s;
+      -moz-transition: all ease .3s;
+      transition: all ease .3s;
+      overflow: hidden;
+      z-index: 1;
+      box-sizing: border-box;
+  }
+
+  .game-item::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(35, 39, 77, 1);
+      opacity: .9;
+      box-sizing: border-box;
+  }
+
+  .game-item .game-inner {
+
+      position: relative;
+      z-index: 1;
+  }
+
+  .game-item__thumb {
+      width: inherit;
+      /* height: 140px; */
+      margin: 0 auto 25px;
+      border: 1px solid rgba(255, 255, 255, .17);
+      border-radius: 7px;
+      background: inherit;
+      /* padding: 10px; */
+  }
+
+  .game-item__thumb img {
+
+      width: 100%;
+      object-fit: contain;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+  }
+
+  .game-content {
+      background-color: rgba(35, 39, 77, 1);
+  }
+
+  .game-content h4 {
+      font-size: 20px;
+      font-family: inherit;
+      text-align: center;
+      line-height: 30px;
+  }
+
+  .game-item:hover {
+      box-shadow: -3.828px -3.828px 6px 0 rgb(255, 191, 0), 3px 5px 8px 0 rgb(255, 191, 0);
+  }
+
+  @media (min-width: 1700px) {
+      .games-wrapper {
+          width: 100%;
+      }
+
+  }
+
+  @media (max-width: 1200px) {
+      .games-wrapper {
+          width: 100%;
+      }
+
+  }
+
+  @media only screen and (max-width: 1000px) {
+      .games-wrapper {
+          width: 100%;
+          display: flex;
+      }
+
+      .game-item {
+          margin: 25px 5px;
+          width: 60%;
+      }
+
+  }
+
+  @media only screen and (max-width: 760px) {
+      .games-wrapper {
+          width: 100%;
+          display: flex;
+      }
+  }
+
+  @media only screen and (max-width: 400px) {
+      .games-wrapper {
+          width: 100%;
+          display: flex;
+      }
+
+  }
+</style>
+<style>
+  .embed-youtube {
+    background-color: #000;
+    margin-bottom: 30px;
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .embed-youtube img {
+    width: 100%;
+    top: -16.84%;
+    left: 0;
+    opacity: 0.7;
+  }
+  .bannerSp{
+			background-image: url(/static/img/HomeTopBg.webp);
+	
+		}
+  .embed-youtube .embed-youtube-play {
+    width: 68px;
+    height: 48px;
+    background-color: #333;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    opacity: 0.8;
+    border-radius: 6px;
+  }
+
+  .embed-youtube .embed-youtube-play:before {
+    content: "";
+    border-style: solid;
+    border-width: 15px 0 15px 26.0px;
+    border-color: transparent transparent transparent #fff;
+  }
+
+  .embed-youtube img,
+  .embed-youtube .embed-youtube-play {
+    cursor: pointer;
+  }
+
+  .embed-youtube img,
+  .embed-youtube iframe,
+  .embed-youtube .embed-youtube-play,
+  .embed-youtube .embed-youtube-play:before {
+    position: absolute;
+  }
+
+  .embed-youtube .embed-youtube-play,
+  .embed-youtube .embed-youtube-play:before {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .main-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+ 
+  }
+  .outer-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .double-flex{
+    width: 47.3%;
+    margin: 10px 0;
+    border-radius: 20px;
+    background-color: rgba(21, 18, 52, 1);
+    padding: 15px 15px;
+  }
+  .double-flex h3{
+    color: rgba(3, 203, 253, 1);
+  }
+  .inner-flex{
+    width: 33%;
+    margin: 10px;
+    padding: 15px 15px;
+    background-color: rgba(21, 18, 52, 1);
+   border-radius: 15px;
+    box-shadow: 0 0 15px lightblue ;
+  }
+  .inner-flex div{
+    margin: 10px 0;
+  }
+  .embed-youtube iframe {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .embed-youtube .embed-youtube-play:hover {
+    background-color: #f00;
+  }
+
+  .customButton:hover {
+    background: linear-gradient(to right, rgb(170, 1, 186), rgb(231, 20, 0)) !important;
+    color: white !important;
+  }
+
+  .customButton {
+    box-shadow: 0 0 10px 2px rgb(109, 4, 238) !important;
+  }
+  #down-home{
+    background-image: url("/static/img/HomeDownBg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+      font-size: 38px !important;
+    }
+
+  @media (max-width:787px) {
+    h1 {
+      font-size: 36px !important;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    h3 {
+      font-size: 24px !important;
+    }
+   
+    .customButton {
+      padding: 10px !important;
+    }
+    .main-flex{
+      flex-direction: column;
+    }
+    .last-flex{
+      width: 100% !important;
+    }
+    .inner-flex,.double-flex{
+      width: 100%;
+    }
+    
+  }
+
+  @media(max-width:600px) {
+    h1 {
+      font-size: 28px !important;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 22px !important;
+    }
+
+    .customButton {
+      padding: 5px !important;
+    }
+    .game-item__thumb{
+      margin: auto auto;
+    }
+    .game-inner-h4{
+      margin: auto auto !important;
+    }
+  }
+</style>
+<section class="bannerSp">
+			 
+  <div style="margin-top: 25px !important;" class="container">
+  
+  <div id="landingContact-Text" class="row">
+    
+  
+    <div  style="display: block !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
+    <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/>
+  </div>
+  
+    <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+       <div class="alert alert-success hidden" id="contactSuccess">
+        <strong>Success!</strong> Your message has been sent to us.
+      </div>
+  
+      <div class="alert alert-danger hidden" id="contactError">
+        <strong>Error!</strong> There was an error sending your message.
+      </div>
+  
+      <form action="{% url 'core:home' %}" method="POST" id="contactForm">
+        {% csrf_token %}
+        <div class="row">
+        
+        <div class="form-group">
+          <div class="col-md-12">
+           <input
+            type="text"
+            value=""
+            data-msg-required="Please enter your name."
+            maxlength="100"
+            class="form-control mb-20 form-control_name contact__input contact__input_input contact__input_name"
+            placeholder="Fullname"
+            name="name"
+            id="name"
+            required
+          />
+          </div>
+          <div class="col-md-12">
+           <input
+            type="email"
+            value=""
+            data-msg-required="Please enter your email address."
+            data-msg-email="Please enter a valid email address."
+            maxlength="100"
+            class="form-control mb-20 contact__input contact__input_input"
+            name="email"
+            placeholder="Email address"
+            id="email"
+            required
+          />
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <div class="phone-container">
+            <span class="mb-20 phone-addon">+1</span>
+            <input 
+            type="number"
+            value=""
+            pattern="[1-9]"
+            onKeyDown="{checkIfNumber(event)}"
+            data-msg-required="Please enter the subject."
+            maxlength="10"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            class="form-control mb-20 contact__input contact__input_phone contact__input_input"
+            name="phone"
+            id="phone"
+            placeholder="Phone"
+            required
+              />
+          <div id="phone-error" class="error-message"></div>
+          </div>
+          </div>
+  
+           <div class="col-md-12">
+          <select
+            data-msg-required="Please enter the subject."
+           maxlength="100"
+           class="form-control mb-20 contact__input contact__input_input contact__input_select"
+           name="subject"
+           id="subject"
+           placeholder="Subject"
+           required>
+         <option class="d-none" value="" disabled selected>Are you looking for?</option>
+        <option value="Player">Player</option>
+        <option value="Distribution">Distribution</option>
+        <option value="New Shop">New Shop</option>
+        <option value="Existing Shop">Existing Shop</option> 
+          </select>
+         </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+           <textarea
+            maxlength="5000"
+            data-msg-required="Please enter your message."
+            rows="10"
+            class="form-control contact__input"
+            name="message"
+            id="message"
+            placeholder="Message"
+            style="height: 145px;"
+          ></textarea>
+          </div>
+        </div>
+        </div>
+        
+        <div class="terms">
+        <input name="check" required  class="terms__checkbox contact__input" id="checkbox1"  type="checkbox"/>
+        <label class="terms__label" for="checkbox1" style="font-size: 12px !important;">Subscription agreement and <a class="terms__anchor"  href="{% url 'main:terms-and-conditions' %}" >Terms and conditions</a>  agreement</label>
+        
+        </div>
+      <div class="rechapta d-none">
+         <div  class="g-recaptcha"  data-callback="recaptchaCallback" data-sitekey="6LcxWx8iAAAAAOh_1FkGyizmjuJYncMg_vMa8qr-"></div>
+      </div>
+
+        <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+          <button
+          style="width: 100% !important;"
+          type="submit"
+          disabled
+          value="Send Message"
+           class="btn btn-primary btn-lg btn-lg_sp btn__disabled"
+          data-loading-text="Loading..."
+          
+          >Submit</button>
+        </div>
+        </div>
+       </form>
+    </div>	
+  
+  </div>
+  
+  </section>
+  <div class="container">
+     <div class="divider"></div>
+  </div>
+  
+
+
+<section class="container home">
+  <h1 style="color: white;" class="home__content">
+    <div>
+      Welcome to the King of Pop 777, where your casino business FINALLY comes to succeed! We’re a creative team of
+      committed professionals and a fast-growing online casino software provider with the skills to level up your casino
+      business.
+
+    </div>
+    <br>
+    <div>
+      Our innovative, globally-featured products are the backbone of reputable online casinos. Secure your casino’s
+      success - Team up with King of Pop 777 now!
+
+    </div>
+
+
+
+  </h1>
+
+
+  <br>
+<div style="display: flex; justify-content: space-between;">
+  <h2 style="width: 70%;"  class="home__content">
+    <div>Why Choose King of Pop 777 for Your Casino Business? </div>
+  </h2>
+  <div style="display: flex; justify-content: center; flex-direction: column;">
+      <a class="text-white " style="text-decoration: none;" href="#landingContact-Text">
+     <button class="customButton" style="font-size: 16px; color: #ffffff;
+   padding: 10px;
+    font-weight: 900;
+    background: rgba(218, 51, 10, 1);
+      border: none; border-radius: 5px;">
+      Register Now
+    </button>
+  </a>
+  </div>
+
+</div>
+<div class="container">
+  <div class="divider"></div>
+</div>
+    <div style="background-color: #23274D;" >
+    <div  style="width: 100%;">
+      <h2 style="font-weight: 700; text-align: center;">
+        <span style="color:#FFB80D;"> Most Popular</span> Games
+      </h2>
+      <div class="owl-carousel">
+        <div class="game-inner-cont"  style="display: flex; justify-content: space-evenly; width: 100%;">
+          <div class="game-item">
+            <div class="game-inner">
+                <div class="game-item__thumb">
+
+         <img src="/static/img/pic.png" alt="none">                </div>
+                <div class="game-content">
+                    <h4 class="game-inner-h4">Meteor Shower</h4>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="game-item">
+          <div class="game-inner">
+              <div class="game-item__thumb">
+
+       <img src="/static/img/pic.png" alt="none">                </div>
+              <div class="game-content">
+                  <h4 class="game-inner-h4">Meteor Shower</h4>
+              </div>
+
+          </div>
+          
+      </div>
+        </div>
+        <div class="game-inner-cont" style="display: flex; justify-content: space-evenly; width: 100%;">
+          <div class="game-item">
+            <div class="game-inner">
+                <div class="game-item__thumb">
+
+         <img src="/static/img/pic.png" alt="none">                </div>
+                <div class="game-content">
+                    <h4 class="game-inner-h4">Meteor Shower</h4>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="game-item">
+          <div class="game-inner">
+              <div class="game-item__thumb">
+
+       <img src="/static/img/pic.png" alt="none">                </div>
+              <div class="game-content">
+                  <h4 class="game-inner-h4">Meteor Shower</h4>
+              </div>
+
+          </div>
+          
+      </div>
+        </div>     <div class="game-inner-cont" style="display: flex; justify-content: space-evenly; width: 100%;">
+          <div class="game-item">
+            <div class="game-inner">
+                <div class="game-item__thumb">
+
+         <img src="/static/img/pic.png" alt="none">                </div>
+                <div class="game-content">
+                    <h4 class="game-inner-h4">Meteor Shower</h4>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="game-item">
+          <div class="game-inner">
+              <div class="game-item__thumb">
+
+       <img src="/static/img/pic.png" alt="none">                </div>
+              <div class="game-content">
+                  <h4 class="game-inner-h4">Meteor Shower</h4>
+              </div>
+
+          </div>
+          
+      </div>
+        </div>     <div class="game-inner-cont" style="display: flex; justify-content: space-evenly; width: 100%;">
+          <div class="game-item">
+            <div class="game-inner">
+                <div class="game-item__thumb">
+
+         <img src="/static/img/pic.png" alt="none">                </div>
+                <div class="game-content">
+                    <h4 class="game-inner-h4">Meteor Shower</h4>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="game-item">
+          <div class="game-inner">
+              <div class="game-item__thumb">
+
+       <img src="/static/img/pic.png" alt="none">                </div>
+              <div class="game-content">
+                  <h4 class="game-inner-h4">Meteor Shower</h4>
+              </div>
+
+          </div>
+          
+      </div>
+        </div>
+       
+      </div>
+    </div>
+   
+    </div>
+    <div class="container">
+      <div class="divider"></div>
+   </div>
+  <div class="main-flex">
+ <div class="inner-flex">
+<div>
+ <img src="/static/img/mountain_flag.png" width="62px" height="68px" alt="mountain_flag">
+</div>
+<div>
+  <h3 style="text-transform: none !important; font-size: 28px;">
+    We are Dedicated to Helping You Succeed
+  </h3>
+</div>
+<div>
+  <p class="home__paragraph">
+    As a certified and licensed business, King of Pop 777 casino software provider ensures that you achieve
+    sustainable growth in regulated markets. We use years of experience, research, advanced resources, and qualified
+    experts to help your business growth.
+  </p>
+</div>
+ </div>
+
+ <div class="inner-flex">
+  <div>
+    <img src="/static/img/Growth.png" width="62px" height="68px" alt="growth">
+   </div>
+   <div>
+    <h3 style="text-transform: none !important; font-size: 28px;">
+      Use Advanced Tools to Grow Your Casino </h3>
+   </div>
+   <div>
+    <p class="home__paragraph">
+      Expect advanced gamification tools to engage and boost gameplay, incredible features, and mechanisms to boost
+      player loyalty. King of Pop online casino software provides in-depth business information for effective analysis.
+    </p>
+   </div>
+ </div>
+
+ <div class="inner-flex">
+  <div>
+    <img src="/static/img/Up.png" width="62px" height="68px" alt="growth">
+   </div>
+   <div>
+    <h3 style="text-transform: none !important; font-size: 28px;">
+      Boost Your Player Engagement
+    </h3>
+   </div>
+   <div>
+  
+    <p class="home__paragraph">
+      Our multi-level games, like the Michael Jackson slot machine and innovative bonus systems, will keep your players
+      on the edge of their seats!
+    </p>
+   </div>
+ </div>
+
+  </div>
+  <div class="main-flex">
+    <div class="inner-flex">
+      <div>
+        <img src="/static/img/Atr.png" width="62px" height="68px" alt="growth">
+       </div>
+       <div>
+        <h3 style="text-transform: none !important; font-size: 28px;">
+          <h3 style="text-transform: none !important; font-size: 28px;">
+            Get an Omni-Channel Experience
+          </h3>
+        </h3>
+       </div>
+       <div>
+      
+        <p class="home__paragraph">
+          King of Pop 777 casino software provider offers cross-platform solutions so that your players can experience
+          premium gambling whenever and wherever. They can use a single account across numerous mobile devices.
+        </p>
+       </div>
+     </div>
+   
+    <div class="inner-flex">
+     <div>
+       <img src="/static/img/encrypted.png" width="62px" height="68px" alt="encrypted">
+      </div>
+      <div>
+     
+    <h3 style="text-transform: none !important; font-size: 28px;">
+      King of Pop 777 Offers Easy Integration
+    </h3>
+      </div>
+      <div>
+        <p class="home__paragraph">
+          Thanks to our advanced API, you can easily integrate our casino software into your platform in a few days.
+        </p>
+      </div>
+    </div>
+   
+    <div class="inner-flex">
+     <div>
+       <img src="/static/img/dice.png" width="62px" height="68px" alt="dice">
+      </div>
+      <div>
+        <h3 style="text-transform: none !important; font-size: 28px;">
+          Our Games are Optimized for Mobile Devices
+        </h3>
+       </h3>
+      </div>
+      <div>
+     
+        <p class="home__paragraph">
+          We provide top-tier HTML5 casino games tailored for mobile devices. Regardless of the games you integrate into
+          your casino, the King of Pop Casino apk is optimized for numerous devices.
+        </p>
+      </div>
+    </div>
+   
+     </div>
+     <div style="width: 98%;" class="inner-flex last-flex">
+      <div>
+        <img src="/static/img/Search.png" width="62px" height="68px" alt="search">
+       </div>
+       <div>
+        
+    <h3 style="text-transform: none !important; font-size: 28px;">
+      King of Pop 777 Ensures Responsible Gaming
+    </h3>
+        </h3>
+       </div>
+       <div>
+      
+       
+    <p class="home__paragraph">
+      We provide transparency to create fair and responsible games under strict regulations.
+    </p>
+       </div>
+     </div>
+     <div class="container">
+      <div class="divider"></div>
+      </div>
+        
+     <!-- <div class="home__paragraphs">
+
+      <a class="text-white " style="text-decoration: none;" href="/">
+        <button class="customButton" style="font-size: 16px; color: #ffffff;
+       padding: 15px;
+        font-weight: 900;
+         background: rgba(218, 51, 10, 1);
+          border: none; border-radius: 5px;">
+          Sign Up Now!
+        </button>
+      </a>
+    </div> -->
+  
+    <div style="display: flex; justify-content: space-between;">
+      <div style="width: 70%;">
+          <h2   class="home__content">
+        <div> Secure Your Platform to Attract More Players</div>
+      </h2>
+      <p  class="home__paragraph">
+        One of the major risk players, especially new ones, watch out for is security threats. King of Pop 777 helps to
+        avoid this risk in several ways:
+      </p>
+      </div>
+    
+      <div style="display: flex; justify-content: center; flex-direction: column;">
+          <a class="text-white " style="text-decoration: none;" href="#landingContact-Text">
+         <button class="customButton" style="font-size: 16px; color: #ffffff;
+       padding: 10px;
+        font-weight: 900;
+        background: rgba(218, 51, 10, 1);
+          border: none; border-radius: 5px;">
+          Register Now
+        </button>
+      </a>
+      </div>
+    
+    </div>
+    <div class="outer-flex">
+  <div class="double-flex"> 
+    <h3 style="text-transform: none !important; font-size: 28px;">
+
+      King of Pop 777 Offers 24/7 Global Support
+    </h3>
+    <p class="home__paragraph">
+      We’re always available to give you the support you need for your casino business to run smoothly. Our support team
+      will help you resolve any issues as soon as possible to help your business succeed!
+
+    </p>
+  </div>
+  <div class="double-flex">
+    <h3 style="text-transform: none !important; font-size: 28px;">
+      Get Advanced Security Protocols
+
+    </h3>
+    <p class="home__paragraph">
+
+      We place a high priority on keeping your online casino safe for you and your players. We’re constantly upgrading
+      our security protocols to secure your business.
+    </p>
+  </div>
+  <div class="double-flex">
+    <h3 style="text-transform: none !important; font-size: 28px;">
+
+      King of Pop 777 Constantly Monitors Threat
+    </h3>
+    <p class="home__paragraph">
+
+      We continuously watch out for threats to secure your casino business so you can focus on what really matters -
+      your players’ experience.
+    </p>
+  </div>
+  <div class="double-flex"
+  >
+  <h3 style="text-transform: none !important; font-size: 28px;">
+
+    We Offer Easy Payment System
+  </h3>
+  <p class="home__paragraph">
+    King of Pop Online Casino software provider Integrates various payment methods to let your players enjoy
+    ultra-fast deposit and cashout features. Players can easily make payments when they use the King of Pop 777 casino
+    download.
+
+  </p>
+</div>
+     
+       </div>
+       <div class="container">
+        <div class="divider"></div>
+        </div>
+
+ 
+</section>
+<section id="down-home"> 
+  <section  class="container home">
+    <div style="padding: 15px auto; margin: 45px auto;">
+
+      <h2 style="text-align: center  !important;" class="home__content">
+    <div >
+    Let <span style="color: rgb(255, 183, 0);">
+      King of Pop 777 
+    </span>  Help You Grow Your Casino Business </div>
+  </h2>
+  <div class="home__paragraphs">
+    <p style="text-align: center !important;" class="home__paragraph">
+      We have the necessary resources to ensure that you attract more players, retain players, and grow your brand.
+      Register today and get access to hundreds of game libraries, effective client management tools, and marketing
+      tools to boost your new business.
+    </p>
+    <!-- <p class="home__paragraph">
+      
+      
+    </p> -->
+    <div style="text-align: center;"> 
+       <a class="text-white " style="text-decoration: none;" href="#landingContact-Text">
+      <button class="customButton" style="font-size: 16px; color: #ffffff;
+     padding: 15px;
+      font-weight: 900;
+      background: rgba(218, 51, 10, 1);
+        border: none; border-radius: 5px;">
+        Register Now
+      </button>
+    </a>
+    </div> 
+    </div>
+ 
+   
+</section>
+</section>
+
+
+<div class="container panelGroup">
+  <div class="row">
+    <!-- <div class="col-md-5 col-12">
+
+      <div class="panel-group" id="accordion">
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#1">
+                <div class="panelGroup__heading">
+
+                  <div class="feature-box-icon">
+                    <img loading="lazy" class="panelGroup__image" src="{% static 'img/left1.webp' %}" alt="photo">
+                  </div>
+                  <h4 class="shorter shorter__sp ">Exciting Sweepstakes Games</h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="1" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                gamevaultcasino App ensures that your customers have access to the best casino games at all times. All of the
+                slot games on the site were developed with meticulous detail.
+                You’re probably aware that the software's quality impacts deposits, wagers, and various bonuses. That’s
+                why gamevaultcasino casino took the time to develop high-quality slot games your customers would love.
+                The online casino games are skillfully designed to maintain your customer's attention while steadily
+                growing your casino business.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#2">
+                <div class="panelGroup__heading">
+
+                  <div class="feature-box-icon">
+                    <img loading="lazy" class="panelGroup__image" src="{% static 'img/left2.webp' %}" alt="photo">
+                  </div>
+                  <h4 class="shorter shorter__sp ">Compatibility with Different Devices </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="2" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                gamevaultcasino Online Casino doesn't have any restrictions when it comes to acceptable devices. So your
+                customers can install it on any mobile device, whether iOS or Android.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#3">
+                <div class="panelGroup__heading">
+
+                  <div class="feature-box-icon">
+                    <img loading="lazy" class="panelGroup__image" src="{% static 'img/left3.webp' %}" alt="photo">
+                  </div>
+                  <h4 class="shorter shorter__sp ">Low System Requirements </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="3" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                When you choose gamevaultcasino Casino, your customers won’t have to worry about storage space or data
+                allowance on your device. We made sure to make the APK file size small without compromising quality.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#4">
+                <div class="panelGroup__heading">
+
+                  <div class="feature-box-icon">
+                    <img loading="lazy" class="panelGroup__image" src="{% static 'img/left4.webp' %}" alt="photo">
+                  </div>
+                  <h4 class="shorter shorter__sp ">Efficient Payment Processing System</h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="4" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                What makes gamevaultcasino App unique is its easy payment system. We developed the app with players in mind.
+                So we’ve solved the issues players face when interacting with our app.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#5">
+                <div class="panelGroup__heading">
+
+                  <div class="feature-box-icon">
+                    <img loading="lazy" class="panelGroup__image" src="{% static 'img/left5.webp' %}" alt="photo">
+                  </div>
+                  <h4 class="shorter shorter__sp ">Bulletproof Security</h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="5" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                gamevaultcasino casino places a premium on your safety and takes that duty seriously. Because of this, playing
+                on gamevaultcasino App is the safest, fairest, and most reliable option. Additionally, the sweepstakes games
+                available on the platform are licensed and regulated by legitimate gaming authorities.
+                So you shouldn't worry. Money deposited on the platform is safe at all times. There are no delays in the
+                dealings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#6">
+                <div class="panelGroup__heading">
+
+                  <div class="feature-box-icon">
+                    <img loading="lazy" class="panelGroup__image" src="{% static 'img/left6.webp' %}" alt="photo">
+                  </div>
+                  <h4 class="shorter shorter__sp ">Easy Installation Service of gamevaultcasino Casino App </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="6" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                We give you a complete documentation file that will guide you to install our online casino software.
+                Regarding our gamevaultcasino online casino, it's easy to install without any complications. Your customers
+                won't have any issues with our software. It's 100% guaranteed!
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#7">
+                <div class="panelGroup__heading">
+
+                  <div class="feature-box-icon">
+                    <img loading="lazy" class="panelGroup__image" src="{% static 'img/left7.webp' %}" alt="photo">
+                  </div>
+                  <h4 class="shorter shorter__sp ">Instant Integration </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="7" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                One of the frustrating aspects of starting an online casino is integrating all the necessary features.
+                gamevaultcasino Casino is uniquely different. We’ve tested our casino software many times to ensure that it’s
+                simple for you to integrate any feature you won’t.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+    </div> -->
+
+
+    <!-- <div class="col-md-7 col-12">
+
+      <div class="embed-youtube" data-video-id="aFDN-mWJ4DQ">
+
+
+        <div class="embed-youtube-play"></div>
+
+      </div>
+    </div> -->
+
+    <!-- <div class="col-md-12 col-12">
+      <div class="text-white text-center h1">
+          <h2 style="color: white; font-size: 36px; line-height: 56px;">
+              Frequently Asked Questions - King of Pop 777
+          </h2>
+      </div>
+      <div class="panel-group row" id="accordion2">
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#21">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">What is King of Pop 777? </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="21" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          King of Pop is a reputable casino software provider that offers a wide range of software
+                          products designed to help your casino business grow, whether it’s an online casino,
+                          internet, or sweepstakes cafe. </p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#22">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">What are the software products that King of Pop 777
+                                  offers?
+                              </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="22" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          King of Pop 777 offers products like internet cafe software, sweepstakes software, and
+                          internet cafe software. These products offer advanced features to help you manage your
+                          casino operations, get more clients, and expand your business.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#23">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  Why Do I need to choose the King of Pop casino software provider? </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="23" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          When you sign up with King of Pop 777, you can access the latest software solutions that
+                          improve security, enhance the gaming experience, boost profits, and provide valuable
+                          features to your casino business.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#24">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  How can I play the King of Pop game? </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="24" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          If you want to play the King of Pop game, you need an online casino, or internet cafe,
+                          or sweepstakes casino that uses their software. If you’re a player, you can enjoy their
+                          games in casinos that use King of Pop's software.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#25">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  How to get free money on King of Pop?
+                              </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="25" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          King of Pop is a casino software provider. That means they offer business owners
+                          cutting-edge tools and features to manage their operations effectively. So, they don’t
+                          offer free money directly to players.
+                      </p>
+                      <p class="tall">
+                          However, casinos that use their software offer various bonuses and promotions where
+                          players can get free money to play any game they want.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#26">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  How can I win on King of Pop slots?
+                              </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="26" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          To win at King of Pop slots, you’ll need to improve your gameplay by using the game’s
+                          demo version to practice. You can enjoy the games and understand the mechanics to
+                          improve your odds of winning.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#27">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  How can I win the jackpot on King of Pop?
+                              </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="27" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          Winning jackpots are usually based on luck since they are often awarded randomly or
+                          through specific in-game features. However, you can improve your winning chances by
+                          wagering wisely and playing frequently.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#28">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  What games are in King of Pop 777?
+                              </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="28" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          King of Pop offers numerous casino games, including online slots, fish tables, card
+                          games, and more. The specific games available may vary depending on the casino that uses
+                          their software.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#29">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  How can I play King of Pop online? </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="29" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          If you want to play King of Pop games online, visit casinos or internet cafes that use
+                          King of Pop's software. You can access various games on these platforms.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#30">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  Can you play King of Pop online?
+                              </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="30" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          Yes. However, you must find casino platforms or internet cafes offering King of Pop
+                          777’s software.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#31">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  Can you play King of Pop on PC?
+                              </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="31" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          Yes. You can play King of Pop games on your computer or even use the King of Pop Casino
+                          apk to play on your mobile device. You can access a casino or internet cafe that uses
+                          King of Pop's software as long as you are of legal age.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="panel panel-default mt-3">
+              <div class="panel-heading darkTheme">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion2" href="#32">
+                          <div class="panelGroup__heading">
+                              <h4 class="shorter shorter__sp ">
+                                  Is King of Pop 777 safe?
+                              </h4>
+                          </div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="32" class="panel-collapse collapse">
+                  <div class="panel-body mt-2">
+                      <p class="tall">
+                          Yes. King of Pop 777 takes security seriously and works with reputable gambling
+                          authorities to ensure their casino software meets the required standards. However, how
+                          secure you are also depends on the casino you choose. So, ensure that the platform
+                          adheres to our legal requirements. Contact our support team if you have more questions.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+
+  </div> -->
+    <!-- <div class="col-md-12 col-12">
+      <div class="text-white text-center h1">Frequently Asked Questions</div>
+      <div class="panel-group row" id="accordion2">
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#21">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">What is gamevaultcasino App? </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="21" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                gamevaultcasino is a software developer from the United States. It provides customers with exceptional
+                services and software solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#22">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">Which Software Models Are Available at gamevaultcasino Casino?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="22" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                There are mainly three software models that you can get from gamevaultcasino. The list includes internet cafe
+                software, sweepstakes software, and online casino software.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#23">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">
+                    Which types of casino games Can I get at gamevaultcasino?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="23" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                You can get both fish arcade games as well as slot machines by acquiring the gamevaultcasino app. All casino
+                games have high-quality graphics, a catchy visual interface, and interactive gameplay.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#24">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">
+                    What Are the Advantages of the gamevaultcasino App?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="24" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                There are several advantages of employing the gamevaultcasino App. The cost efficiency of the services,
+                quality of the products, and 24/7 customer support are just a few of them.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#25">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">
+                    How Can I acquire the gamevaultcasino app?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="25" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                In order to get the gamevaultcasino app, you need to contact us and specify the type of business that you are
+                running or try to open and discuss the details with our customer support professionals to find the best
+                deals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#26">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">
+                    Can I Provide Mobile Gambling with gamevaultcasino Casino Software?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="26" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                Yes. By acquiring the gamevaultcasino casino software, you can start your brand new gaming site and also
+                optimize it for mobile devices so that players can access the platform whenever and wherever they want.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#27">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">
+                    What is the Payout Rates for the gamevaultcasino games?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="27" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                The exact payout rates for gamevaultcasino games are not available. However, we made sure that our gaming
+                library consists of only the best quality sweepstakes titles with relatively higher RTP.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#28">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">
+                    Is the gamevaultcasino app safe?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="28" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                gamevaultcasino App has been tested multiple times before the initial launch. So, you do not have to worry
+                about safety while employing the gamevaultcasino app or any other software model that you acquire from this
+                brand.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#29">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">
+                    Who can take advantage of the gamevaultcasino Casino?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="29" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                People who want to improve their already existing business or the ones that are just starting can take
+                advantage of the gamevaultcasino app. They can easily acquire the required software solution and start using
+                the services right away.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default mt-3">
+          <div class="panel-heading darkTheme">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#30">
+                <div class="panelGroup__heading">
+                  <h4 class="shorter shorter__sp ">
+                    What Are the Payment systems that are supported by gamevaultcasino Casino?
+                  </h4>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="30" class="panel-collapse collapse">
+            <div class="panel-body mt-2">
+              <p class="tall">
+                There are multiple payment systems that are supported by the gamevaultcasino app, including Cryptocurrencies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+    </div> -->
+
+
+
+
+  </div>
+</div>
+<!-- <script src="/static/js/lazyYoutube.js"></script> -->
+
+<!-- <script>
+
+  function init() {
+  var vidDefer = document.getElementsByTagName('iframe');
+  for (var i=0; i<vidDefer.length; i++) {
+  if(vidDefer[i].getAttribute('data-src')) {
+  vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+  } } }
+  window.onload = init;
+  
+  </script> -->
+
+
+
+{% endblock %}

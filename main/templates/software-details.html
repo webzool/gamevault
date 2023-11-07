@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+
+{% block title %}
+			
+        <title>{{software.name}}</title>
+        <meta name="keywords" content={{software.meta_keywords}}>
+        <meta name="description" content={{software.meta_description}}>
+{% endblock title %}
+
+
+{% block content %}
+<style>
+      #down-home{
+    background-image: url("/static/img/HomeDownBg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+        .bannerSp__imageWrapper_right{
+                margin: 25% auto ;
+                }
+        @media (max-width:993px){
+                .bannerSp__imageWrapper_right{
+                        margin: unset !important;
+                }
+        }
+</style>
+<section class="bannerSp">
+			 
+        <div style="margin-top: 25px !important;" class="container">
+        
+              <div id="landingContact-Text" class="row">
+                
+              
+                <div  style=" display: flex !important; justify-content: center !important; flex-direction: column !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
+                      <!-- <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/> -->
+                   <h1 style="color: white; font-weight: 900; text-align: center;">
+                         {{software.name}}
+                   </h1>  
+              </div>
+              
+                <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+                               <div class="alert alert-success hidden" id="contactSuccess">
+                                <strong>Success!</strong> Your message has been sent to us.
+                              </div>
+              
+                              <div class="alert alert-danger hidden" id="contactError">
+                                <strong>Error!</strong> There was an error sending your message.
+                              </div>
+              
+                              <form action="{% url 'core:home' %}" method="POST" id="contactForm">
+                                      {% csrf_token %}
+                                <div class="row">
+                                      
+                                      <div class="form-group">
+                                        <div class="col-md-12">
+                                               <input
+                                                type="text"
+                                                value=""
+                                                data-msg-required="Please enter your name."
+                                                maxlength="100"
+                                                class="form-control mb-20 form-control_name contact__input contact__input_input contact__input_name"
+                                                placeholder="Fullname"
+                                                name="name"
+                                                id="name"
+                                                required
+                                              />
+                                        </div>
+                                        <div class="col-md-12">
+                                               <input
+                                                type="email"
+                                                value=""
+                                                data-msg-required="Please enter your email address."
+                                                data-msg-email="Please enter a valid email address."
+                                                maxlength="100"
+                                                class="form-control mb-20 contact__input contact__input_input"
+                                                name="email"
+                                                placeholder="Email address"
+                                                id="email"
+                                                required
+                                              />
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="row">
+                                      <div class="form-group">
+                                        <div class="col-md-12">
+                                                <div class="phone-container">
+                                                      <span class="mb-20 phone-addon">+1</span>
+                                                      <input 
+                                                      type="number"
+                                                      value=""
+                                                      pattern="[1-9]"
+                                                      onKeyDown="{checkIfNumber(event)}"
+                                                      data-msg-required="Please enter the subject."
+                                                      maxlength="10"
+                                                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                                      class="form-control mb-20 contact__input contact__input_phone contact__input_input"
+                                                      name="phone"
+                                                      id="phone"
+                                                      placeholder="Phone"
+                                                      required
+                                                        />
+                                              <div id="phone-error" class="error-message"></div>
+                                              </div>
+                                        </div>
+        
+                                         <div class="col-md-12">
+                                              <select
+                                                data-msg-required="Please enter the subject."
+                                               maxlength="100"
+                                               class="form-control mb-20 contact__input contact__input_input contact__input_select"
+                                               name="subject"
+                                               id="subject"
+                                               placeholder="Subject"
+                                               required>
+                                 <option class="d-none" value="" disabled selected>Are you looking for?</option>
+                                <option value="Player">Player</option>
+                                <option value="Distribution">Distribution</option>
+                                <option value="New Shop">New Shop</option>
+                                <option value="Existing Shop">Existing Shop</option> 
+                                        </select>
+                                       </div>
+                                      </div>
+                                </div>
+                                <div class="row">
+                                      <div class="form-group">
+                                        <div class="col-md-12">
+                                               <textarea
+                                                maxlength="5000"
+                                                data-msg-required="Please enter your message."
+                                                rows="10"
+                                                class="form-control contact__input"
+                                                name="message"
+                                                id="message"
+                                                placeholder="Message"
+                                                style="height: 145px;"
+                                              ></textarea>
+                                        </div>
+                                      </div>
+                                </div>
+                                
+                                <div class="terms">
+                                      <input name="check" required  class="terms__checkbox contact__input" id="checkbox1"  type="checkbox"/>
+                                      <label class="terms__label" for="checkbox1" style="font-size: 12px !important;">Subscription agreement and <a class="terms__anchor"  href="{% url 'main:terms-and-conditions' %}" >Terms and conditions</a>  agreement</label>
+                                      
+                                      </div>
+                              <div class="rechapta d-none">
+                                       <div  class="g-recaptcha"  data-callback="recaptchaCallback" data-sitekey="6LcxWx8iAAAAAOh_1FkGyizmjuJYncMg_vMa8qr-"></div>
+                              </div>
+
+                                <div class="row">
+                                      <div class="col-md-12 d-flex justify-content-center">
+                                              <button
+                                              style="width: 100% !important;"
+                                              type="submit"
+                                              disabled
+                                              value="Send Message"
+                                               class="btn btn-primary btn-lg btn-lg_sp btn__disabled"
+                                              data-loading-text="Loading..."
+                                        
+                                        >Submit</button>
+                                      </div>
+                                </div>
+                               </form>
+                      </div>	
+              
+        </div>
+        
+        </section>
+        <div class="container">
+                <div class="divider"></div>
+        </div>
+<div class="container">
+<div role="main" class="main">
+	{{ software.content|safe }}
+</div>
+</div>
+<div class="container">
+        <div class="divider"></div>
+     
+</div>
+<p class="SOFTNAME" style="display: none;">{{software.name}}</p>
+<section id="down-home"> 
+        <section  class="container home">
+          <div style="padding: 15px auto; margin: 45px auto;">
+      
+            <h2 style="text-align: center  !important;" class="home__content">
+          <div >
+          Let <span style="color: rgb(255, 183, 0);">
+            King of Pop 777 
+          </span>  Help You Grow Your Casino Business </div>
+        </h2>
+        <div class="home__paragraphs">
+          <p style="text-align: center !important;" class="home__paragraph">
+            We have the necessary resources to ensure that you attract more players, retain players, and grow your brand.
+            Register today and get access to hundreds of game libraries, effective client management tools, and marketing
+            tools to boost your new business.
+          </p>
+          <!-- <p class="home__paragraph">
+            
+            
+          </p> -->
+          <div style="text-align: center;"> 
+             <a class="text-white " style="text-decoration: none;" href="#landingContact-Text">
+            <button class="customButton" style="font-size: 16px; color: #ffffff;
+           padding: 15px;
+            font-weight: 900;
+            background: rgba(218, 51, 10, 1);
+              border: none; border-radius: 5px;">
+              Register Now
+            </button>
+          </a>
+          </div> 
+          </div>
+       
+         
+      </section>
+      </section>
+      <br><br>
+<script>
+        let banner = document.querySelector(".bannerSp")
+         let downBanner=document.getElementById("down-home")
+       let name=document.querySelector(".SOFTNAME")
+       let nameText=name.innerText
+     nameText="SweepStakes software" && nameText!="Online Casino software" && nameText!="Internet Cafe software" ?  
+     banner.style.backgroundImage='url("/static/img/SweepStake.webp")'
+     :nameText="Online Casino software" && nameText!="SweepStakes software" && nameText!="Internet Cafe software" ?
+     banner.style.backgroundImage='url("/static/img/OnlineCasino.webp")'
+     :nameText="Internet Cafe software" && nameText!="SweepStakes software" && nameText!="Online Casino software"?
+     banner.style.backgroundImage='url("/static/img/InternetCafe.webp")':""
+
+
+</script>
+{% endblock %}
+

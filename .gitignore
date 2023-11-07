@@ -1,0 +1,43 @@
+/backend/settings_local.py
+/media/**
+/media
+media
+
+# No pycache
+*.pyc
+**/__pycache__/**
+
+# Ignore every file in migrations folder
+**/migrations/*
+# Except the init file
+!__init__.py
+gunicorn.log
+gunicorn.log/
+.env
+dev.env
+logfile_bitplay
+_frontend/
+/frontend/.next/
+/frontend/.next/*
+/frontend/env.js
+/frontend/.env
+/.vscode
+/.idea
+credentials.json
+.DS_Store
+db.sqlite3
+/venv
+.venv
+.env
+/out/
+/out
+out
+db.sqlite3
+backend/settings_local.py
+/__pycache__/
+/__pycache__
+__pycache__
+
+Pipfile.lock
+pgdb/
+8000

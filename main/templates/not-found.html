@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}
+			
+        <title>Page-Not-Found</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<style>
+        .not-found-div  h1{
+                font-weight: 300;
+                font-size: 70px;
+                color: white;
+                
+        }
+      .not-found-div  h1{
+             text-align: center;
+             margin-bottom: 40px !important;
+        }
+        .not-found-div p{
+            margin: 15px auto;
+            text-align: center;
+            font-size: 18px;
+        }
+      
+   
+        .not-found-div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 400px;
+                
+        }
+        .go-home-div{
+                margin-top: 30px;
+        }
+        .go-home-div :hover{
+            transform: scale(1.040);
+            transition: 1s ease-in-out;
+            color: rgb(226, 128, 43);
+        }
+         .go-home-btn{
+                background-image: linear-gradient( to right, rgb(0, 60, 35),rgb(1, 190, 111));
+            border-radius: 5px;  
+            border: none;
+         }
+         .go-home-link{
+            text-decoration: none !important;
+         }
+         .go-home-btn span{
+                font-size: 18px;
+         }
+        @media(max-width:875px){
+                .not-found-div h1{
+                        font-size: 36px;
+                }
+        } @media(max-width:410px){
+                .not-found-div h1{
+                        font-size: 24px;
+                }
+        }
+</style>
+
+<div class="container">
+
+   
+<div class="not-found-div">
+
+
+        
+ <h1>
+        404 Page-Not-Found
+ </h1>
+ <p>
+     The Page you are looking for might have been removed, had its name changed or it is temporarily unavailable.
+ </p>
+ <div class="go-home-div" >
+      <p>
+        
+        <button class="go-home-btn"> <a class="go-home-link" href="/"> <span>Go Home</span> </a> </button>
+         
+      </p>  
+ </div>
+
+ </div>
+
+ </div>
+
+ {% endblock %}

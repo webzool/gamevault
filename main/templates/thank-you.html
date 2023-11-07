@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+{% comment %} {% load static %} {% endcomment %}
+{% load static %}
+{% load custom_tags %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		{% block title %}
+		
+		<title>gamevaultcasino Casino </title>
+		<meta name="keywords" content="gamevaultcasino Casino">
+		<meta name="description" content="Start your profitable online casino business easily and quickly with gamevaultcasino Casino! We provide the latest software solutions to help your business thrive! ">
+		{% endblock title %}
+		<meta name="author" content="gamevaultcasino Casino">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Web Fonts  -->
+		<!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Alegreya|Alegreya+SC|Oswald:400,300" rel="stylesheet" type="text/css"> -->
+		<link rel="preload" as="image" href="{% static 'img/gamevaultcasinologo.png' %}">
+		<!-- Vendor CSS -->
+		<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+		<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="{% static 'vendor/fontawesome/css/font-awesome.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/rs-plugin/css/settings.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/owlcarousel/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/owlcarousel/owl.theme.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" async>
+		<meta property="og:title" content="gamevaultcasino Casino">
+		<meta property="og:description" content="Start your profitable online casino business easily and quickly with GamesIslands! We provide the latest software solutions to help your business thrive!">
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="https://gamevault-casino.com/">
+		<meta property="og:image" content="{% static 'img/gamevaultcasinologo.png' %}">
+		<meta name="twitter:image" content="{% static 'img/gamevaultcasinologo.png' %}">
+		<meta name="twitter:creator" content="@gamevaultcasino-casino">
+		<meta name="twitter:site" content="@gamevaultcasino-casino">
+		<meta name="twitter:card" content="gamevaultcasino-casino">
+		
+
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="{% static 'css/themee.css' %}" async>
+		<link rel="stylesheet" href="{% static 'css/theme-elements.css' %}" async>
+		<link rel="stylesheet" href="{% static 'css/theme-blog.css' %}" async>
+		<link rel="stylesheet" href="{% static 'css/theme-shop.css' %}" async>
+		<link rel="stylesheet" href="{% static 'css/theme-animate.css' %}" async>
+
+
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="{% static 'css/skins/defaultt.css' %}" async>
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="{% static 'css/customm.css' %}" async>
+
+		<!-- Head Libs -->
+        {% block social_headers %}
+
+
+        {% endblock %}
+
+		<script src="{% static 'vendor/modernizr/modernizr.js' %}" defer></script>
+	
+
+		<!--[if IE]>
+			<link rel="stylesheet" href="css/ie.css">
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+			<script src="vendor/respond/respond.js"></script>
+			<script src="vendor/excanvas/excanvas.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div class="body">
+			<header  id="header">
+				<div class="container">
+					<h1 class="logo">
+						<a href="/">
+							<img class="logoImage" alt="Tucson" height="50" src="{% static 'img/river-monster-logo.svg' %}">
+						</a>
+					</h1>
+					<p class="header__contact animation">
+						<i class="fa animation_shining text-green phone-icon fa-phone"></i>
+						<a class="sfBold animation_shining text-white" href="telto:+1 (510) 7303208 ">+1 (510) 7303208</a>
+					</p>
+					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+				<div class="navbar-collapse nav-main-collapse collapse">
+					<div class="container-fluid">
+						<!-- <div class="search" id="headerSearch">
+							<a href="#" id="headerSearchOpen"><i class="fa fa-search"></i></a>
+							<div class="search-input">
+								<form id="headerSearchForm" action="page-search-results.html" method="get">
+									<div class="input-group">
+										<input type="text" class="form-control search" name="q" id="q" placeholder="Search..." required>
+										<span class="input-group-btn">
+											<button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</div> -->
+						<nav class="nav-main mega-menu">
+							<ul class="nav nav-pills nav-main" id="mainMenu">
+								<li {% if request.resolver_match.url_name == 'home' %} class="active" {% endif %}>
+									<a class="dropdown-toggle" href="{% url 'main:home' %}">
+										Home
+									</a>
+								</li>
+
+								<li  {% if request.resolver_match.url_name == 'about' %} class="active" {% endif %}>
+									<a class="dropdown-toggle" href="{% url 'main:about' %}">
+										About us
+									</a>
+								</li>
+					
+								{% get_header as items %}
+								<li class="dropdown" {% if request.resolver_match.url_name == 'software-detail' %} class="active" {% endif %}>
+									<a class="dropdown-toggle" href="#">
+										Software
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+
+                                        {% for item in items.software_list %}
+										<li><a href="{% url 'main:software-detail' item.slug %}">{{item.name}}</a></li>
+										{% endfor %}
+									</ul>
+								</li>
+								<li {% if request.resolver_match.url_name == 'faq' %} class="active" {% endif %}>
+									<a href="{% url 'main:faq'  %}">Faq</a>
+								</li>
+								<li {% if request.resolver_match.url_name == 'Games' %} class="active" {% endif %}>
+									<a href="{% url 'main:games'  %}">Games</a>
+								</li>
+								<li {% if request.resolver_match.url_name == 'blogs' %} class="active" {% endif %}>
+										<!-- blog done  -->
+									<a  href="https://blog.gamevault-casino.com/"  target="_blank">
+										Blog
+									</a>
+								</li>
+								<li {% if request.resolver_match.url_name == 'contact' %} class="active" {% endif %}>
+									<a href="{% url 'main:contact' %}">
+										Contact us
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+
+ 				
+            
+			<div class="container">
+
+				<div class="thenYou">
+				<h1 class="thankYou__header">
+					Thank you for contacting us!
+				</h1>
+				
+				<p class="thankYou__text">
+					Our team will reach back out to you!
+				</p>
+				</div>
+					
+				 </div>
+
+               
+          
+		 
+			<script>
+				function onSubmit(token) {
+				  document.getElementById("demo-form").submit();
+				}
+			  </script>
+
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 mr-5">
+							<div class="text-center contact-details">
+								<h4 class="text-center">Contact   &nbsp;  us</h4>
+								<ul class="contact">
+									<li class="text-center"> 
+										<h1 class="logo mb-20">
+										<a href="{% url 'main:home' %}">
+											<img class="logoImage footer_logo" alt="Tucson" width="148" src="{% static 'img/river-monster-logo.svg' %}">
+										</a>
+									</h1></li>
+									<li>
+										<p class="d-flex justify-content-center">
+											<a class="sf" href="mailto:sales@gamevault-casino.com">Email: sales@gamevault-casino.com</a>
+										</p>
+									</li>
+									<li>
+										<p class="d-flex justify-content-center  animation">
+											<i class="fa text-green phone-icon  animation_shining fa-phone"></i>
+											<a class="sfBold animation_shining" href="telto:+1 (510) 7303208 ">+1 (510) 7303208</a>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 offset-md-1">
+							<h4>Links</h4>
+							<ul class="nav nav-list primary push-bottom">
+								<li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:contact' %}">Contact &nbsp;&nbsp; us</a></li>
+								<li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:about' %}">About &nbsp;&nbsp; us</a></li>
+								<li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms &nbsp;&nbsp; and &nbsp;&nbsp; conditions</a></li>
+								<li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:privacy-policy' %}">Privacy &nbsp;&nbsp; policy</a></li>
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<h4>Software</h4>
+							<div id="tweet" class="twitter" data-plugin-tweets data-plugin-options='{"username": "", "count": 2}'>
+								<ul class="nav nav-list primary push-bottom">
+									<li><a href="{% url 'main:faq' %}">Faq</a></li>
+									<li><a href="{% url 'main:games' %}">Games</a></li>
+									<li><a title="Class aptent taciti sociosqu ad litora torquent" href="https://blog.rivermosnter-casino.com">Blog</a></li>
+
+									{% for item in items.software_list %}
+									<li><a href="{% url 'main:software-detail' item.slug %}">{{item.name}}</a></li>
+										{% endfor %}
+									
+
+									
+								</ul>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<p class="footer__copyright">Copyright © 2014. All Rights Reserved.</p>
+							</div>
+							<div class="col-md-6">
+								<ul class="social-icons">
+									<!-- <li><a href="http://www.twitter.com/" target="_blank" rel="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a></li> -->
+									<!-- <li><a href="http://www.facebook.com/" target="_blank" rel="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="http://www.facebook.com/" target="_blank" rel="tooltip" title="Facebook"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="http://www.facebook.com/" target="_blank" rel="tooltip" title="Facebook"><i class="fa fa-youtube"></i></a></li> -->
+									<!-- <li><a href="http://www.google.com/" target="_blank" rel="tooltip" title="Google+"><i class="fa fa-google-plus"></i></a></li> -->
+									<!-- <li><a href="http://www.linkedin.com/" target="_blank" rel="tooltip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li> -->
+								</ul>
+							</div>
+						</div>
+					</div>
+				
+
+			</footer> 
+ 
+		<!-- Vendor -->
+		<script src='https://www.google.com/recaptcha/api.js' defer></script>
+		<script src="https://kit.fontawesome.com/c3726104d6.js" crossorigin="anonymous"></script>
+		<script src="{% static 'vendor/jquery/jquery.js' %}"></script>
+		<script src="{% static 'vendor/jquery.appear/jquery.appear.js' %}" defer></script>
+		<script src="{% static 'vendor/jquery.easing/jquery.easing.js' %}" defer></script>
+		<script src="{% static 'vendor/jquery-cookie/jquery-cookie.js' %}" defer></script>
+		<script src="{% static 'vendor/bootstrap/bootstrap.js' %}" defer></script>
+		<script src="{% static 'vendor/common/common.js' %}" defer></script>
+		<!-- <script src="{% static 'vendor/rs-plugin/js/jquery.themepunch.tools.min.js' %}" defer></script>
+		<script src="{% static 'vendor/rs-plugin/js/jquery.themepunch.revolution.min.js' %}" defer></script> -->
+		<script src="{% static 'vendor/jquery.validation/jquery.validation.js' %}" defer></script>
+		<script src="{% static 'vendor/jquery.stellar/jquery.stellar.js' %}" defer></script>
+		<script src="{% static 'vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js' %}" defer></script>
+		<script src="{% static 'vendor/jquery.gmap/jquery.gmap.js' %}" defer></script>
+		<script src="{% static 'vendor/twitterjs/twitter.js' %}" defer></script>
+		<script src="{% static 'vendor/isotope/jquery.isotope.js' %}" defer></script>
+		<script src="{% static 'vendor/owlcarousel/owl.carousel.js' %}" defer></script>
+		<script src="{% static 'vendor/jflickrfeed/jflickrfeed.js' %}" defer></script>
+		<script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.js' %}" defer></script>
+		<script src="{% static 'vendor/vide/vide.js' %}" defer></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="{% static 'js/theme.js' %}" defer></script>
+		
+		<!-- Specific Page Vendor and Views -->
+		<script src="{% static 'js/views/view.home.js' %}" defer></script>
+		
+		<!-- Theme Custom -->
+		<script src="{% static 'js/custom.js' %}" defer></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="{% static 'js/theme.init.js' %}" defer></script>
+	</body>
+            </html>
+
