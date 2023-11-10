@@ -2,6 +2,31 @@
 
 {% block title %}
 <style>
+      .view-div:hover{
+    box-shadow: 0 0 10px #FDB92F;
+    background-color: #FCA900 !important;
+  }
+  .view-div p a{
+color:#ffffff ;
+  }
+  .view-div:hover>p>a{
+color:#ffffff ;
+  }
+  .view-div:hover>p>img{
+transform: translateX(50%);
+filter: drop-shadow(0px 0px #FDB92F );
+  }
+  .view-div{
+    cursor: pointer;
+  }
+     #head-form-div{
+                background-image:url(/static/img/Blues.webp) ;
+        }
+        #down-home {
+            background-image: linear-gradient(20deg,rgba(105, 11, 66, 1),rgba(152, 26, 100, 1),rgba(199, 79, 75, 1),rgba(181, 91, 46, 1)) !important;
+
+ margin: auto;
+  }
     .games-wrapper {
 
         width: 100%;
@@ -38,7 +63,7 @@
         height: 100%;
         left: 0;
         top: 0;
-        background: rgba(35, 39, 77, 1);
+        background:#45295C;
         opacity: .9;
         box-sizing: border-box;
     }
@@ -67,9 +92,7 @@
         overflow: clip;
     }
 
-    .game-content {
-        background-color: rgba(35, 39, 77, 1);
-    }
+  
 
     .game-content h4 {
         font-size: 20px;
@@ -502,18 +525,18 @@
 
 
 {% block content %}
-<section  class="bannerSp">
-			 
-    <div style="margin-top: 25px !important;"   class="container">
+<br>
+<br>
+<section id="head-form-div" >
+    <section >
+         
+    <div  style="margin-top: 25px !important;" class="container">
     
-          <div id="landingContact-Text" class="row">
+          <div  id="landingContact-Text" class="row">
             
           
-            <div  style="display: block !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
-                  <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/>
-          </div>
-          
-            <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+       <div style="margin: auto;"> 
+             <div  style="background-color: #45295C; float: none !important; padding: 25px; border-radius: 5px; margin: auto;" class="col-md-5 col-12">
                            <div class="alert alert-success hidden" id="contactSuccess">
                             <strong>Success!</strong> Your message has been sent to us.
                           </div>
@@ -638,10 +661,27 @@
                             </div>
                            </form>
                   </div>	
+
+
+
+
+
+
+
+       </div>
+
+
+          
+           
           
     </div>
-    
+    <br><br><br>
+    <h1 style="color: white; text-align: center;">
+          Games
+    </h1>
     </section>
+    
+</section>
 
     <div class="container">
         <div class="divider"></div>
@@ -668,7 +708,19 @@
                     <img src="/static/img/pic.png" alt="none">
                 </div>
                 <div class="game-content">
-                    <h4 class="Dragon">River Monster</h4>
+                    <h4 class="Dragon">Spartacus</h4>
+                    <div style="width: 80%; margin: auto;">
+                        <a style="text-decoration: none;" href="{% url 'main:spartacus' %}"> 
+
+                <div class="view-div" 
+                    style="background-color: #FDB92F;
+                     border-radius: 5px;">
+                        <p style=" padding: 10px 0; text-align: center; color: white; text-transform: uppercase; font-size: 16px;">View all <img src="/static/img/Arrow.png" alt="arrow"></p> 
+                    </div>
+                        </a>
+                       
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -678,6 +730,14 @@
          <img src="/static/img/pic.png" alt="none">                </div>
                 <div class="game-content">
                     <h4 class="fish">Ocean Monster</h4>
+
+                        <div style="width: 80%; margin: auto;">
+                        <div class="view-div" 
+                    style="background-color: #FDB92F;
+                     border-radius: 5px;">
+                        <a style="text-decoration: none;" href="/games"> <p style=" padding: 10px 0; text-align: center; color: white; text-transform: uppercase; font-size: 16px;">View all <img src="/static/img/Arrow.png" alt="arrow"></a></p> 
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -688,6 +748,13 @@
          <img src="/static/img/pic.png" alt="none">                </div>
                 <div class="game-content">
                     <h4 class="treasure">Golden Toad</h4>
+                        <div style="width: 80%; margin: auto;">
+                        <div class="view-div" 
+                    style="background-color: #FDB92F;
+                     border-radius: 5px;">
+                        <a style="text-decoration: none;" href="/games"> <p style=" padding: 10px 0; text-align: center; color: white; text-transform: uppercase; font-size: 16px;">View all <img src="/static/img/Arrow.png" alt="arrow"></a></p> 
+                    </div>
+                    </div>
                 </div>
 
             </div>
@@ -699,6 +766,13 @@
          <img src="/static/img/pic.png" alt="none">                </div>
                 <div class="game-content">
                     <h4 class="meteor-shower">Meteor Shower</h4>
+                        <div style="width: 80%; margin: auto;">
+                        <div class="view-div" 
+                    style="background-color: #FDB92F;
+                     border-radius: 5px;">
+                        <a style="text-decoration: none;" href="/games"> <p style=" padding: 10px 0; text-align: center; color: white; text-transform: uppercase; font-size: 16px;">View all <img src="/static/img/Arrow.png" alt="arrow"></a></p> 
+                    </div>
+                    </div>
                 </div>
 
             </div>
@@ -707,17 +781,12 @@
 
 
     </div>
-    <div class="container">
+    <!-- <div class="container">
         <div class="divider"></div>
-    </div>
-    <div class="outer-flex">
+    </div> -->
+    <!-- <div class="outer-flex">
         <div class="inner-container">
-            <!-- <div class="game-heading">
-                <h2>
-       
-                Plinko: Gameplay
-                </h2>
-            </div> -->
+ 
 
 
 
@@ -1046,11 +1115,11 @@
 
 
         </div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="divider"></div>
-    </div>
+    </div> -->
 
 
 
@@ -1062,42 +1131,42 @@
 
 
 
-<section id="down-home">
-    <section class="container home">
-        <div style="padding: 15px auto; margin: 45px auto;">
-
-            <h2 style="text-align: center  !important;" class="home__content">
-                <div>
-                    <span style="color: rgb(255, 183, 0);">
-                        Sign Up
-                    </span> with King of Pop 777 Now!
-                </div>
-
-            </h2>
-            <div class="home__paragraphs">
-                <p style="text-align: center !important;" class="home__paragraph">
-                    We know that your casino’s success goes beyond just offering great games. It’s also about having the
-                    right resources and tools to manage and evaluate your casino’s performance. 
-                </p>
-                <p style="text-align: center !important;" class="home__paragraph">
-                    King of Pop 777 offers the most powerful, flexible, and user-friendly casino administrative
-                    interface to sustain growth. Register with us today and turn your casino business into a profitable
-                    one!  </p>
-
-                <div style="text-align: center;">
-                    <a class="text-white " style="text-decoration: none;" href="/">
-                        <button class="customButton" style="font-size: 16px; color: #ffffff;
+<section >
+    <section  class="container home">
+      <div id="down-home" style="padding: 20px 0;">
+  
+      
+      <div style="padding: 15px auto; margin: 45px auto;">
+  
+        <h2 style="text-align: center  !important; text-transform: uppercase;" class="home__content">
+          <div>
+            Let GAme Vault Help You Grow Your Casino Business
+        </h2>
+        <div class="home__paragraphs">
+          <p style="text-align: center !important;" class="home__paragraph">
+            We have the necessary resources to ensure that you attract more players, retain players, and grow your brand.
+            Register today and get access to hundreds of game libraries, effective client management tools, and marketing
+            tools to boost your new business.
+          </p>
+          <!-- <p class="home__paragraph">
+        
+        
+      </p> -->
+          <div style="text-align: center;">
+            <a class="text-white " style="text-decoration: none;" href="#landingContact-Text">
+              <button class="customButton" style="font-size: 16px; color: #ffffff;
        padding: 15px;
         font-weight: 900;
-        background: rgba(218, 51, 10, 1);
+        background: #45295C;
           border: none; border-radius: 5px;">
-                            Sign Up Now
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-
+                Register Now
+              </button>
+            </a>
+          </div>
+        </div>
+  </div>
+  
     </section>
-</section>
+  </section>
+  <br><br><br>
 {% endblock %}

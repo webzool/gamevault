@@ -3,12 +3,12 @@ Name: 			theme.css
 Written by: 	Okler Themes - (http://www.okler.net)
 Version: 		2.1.0
 */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 body {
 	background-color: #021926;
 	color: white;
-	font-family: 'IBM Plex Mono', monospace !important;	font-size: 13px;
+	font-family: 'Share Tech', sans-serif !important;
+	font-size: 13px;
 	line-height: 22px;
 	margin: 0;
 	padding: 0 0 0;
@@ -135,7 +135,7 @@ html.no-page-top body > .body {
 	background: none repeat scroll 0 0 #fff;
 	/* border-bottom: 3px solid #27024dc2; */
 	clear: both;
-	padding: 4px 0 8px;
+	padding: 10px 0 8px;
 	position: fixed;
 	top: 0;
 	transition: all 0.2s ease 0s;
@@ -451,7 +451,7 @@ html.no-page-top body > .body {
 	line-height: 28px;
 	letter-spacing: 0px;
 	text-align: left;
-    font-family: 'IBM Plex Mono', monospace !important; 
+	font-family: 'Share Tech', sans-serif !important;
 }
 
 #header nav ul.nav-main li a:active {
@@ -486,8 +486,9 @@ html.no-page-top body > .body {
 }
 
 #header nav ul.nav-main li.active a {
-	background-color: transparent;
-	color: rgb(250, 0, 67) !important;
+	background-color: rgba(152, 25, 99, 1);
+	border-radius: 10px;
+	color: rgb(255, 255, 255) !important;
 }
 
 #header nav ul.nav-main li a.dropdown-toggle.extra {
@@ -495,7 +496,7 @@ html.no-page-top body > .body {
 }
 
 #header nav ul.nav-main ul.dropdown-menu {
-	background-color: rgba(169, 20, 0, 1) !important;
+	background-color: #2B153C !important;
 	border: 0;
 	border-radius: 6px;
 	margin: 0 0 0 3px;
@@ -1274,7 +1275,7 @@ div.divider{
 }
 
 section.home .home__contentt{
-	font-family: 'IBM Plex Mono', monospace !important;
+	font-family: 'Share Tech', sans-serif !important;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 24px;
@@ -1288,7 +1289,7 @@ section.home .home__contentt{
 .home__paragraphs p.home__paragraph{
 	margin-bottom: 30px;
 	font-size: 16px;
-	font-family: 'IBM Plex Mono', monospace !important;
+		font-family: 'Share Tech', sans-serif !important;
 	line-height: 20px;
 }
 
@@ -1516,7 +1517,7 @@ aside ul.nav-list > li > a {
 }
 
 .slider a.main-button {
-    font-family: 'IBM Plex Mono', monospace !important; 	font-size: 26px;
+    	font-family: 'Share Tech', sans-serif !important; 	font-size: 26px;
 	font-weight: 300;
 	line-height: 20px;
 	padding: 20px 55px;
@@ -1535,7 +1536,7 @@ aside ul.nav-list > li > a {
 	color: #9a9a9a;
 	font-size: 32px;
 	font-weight: 300;
-	font-family: 'IBM Plex Mono', monospace !important;
+		font-family: 'Share Tech', sans-serif !important;
 	-webkit-text-stroke: 0.2px;
 }
 
@@ -1936,11 +1937,11 @@ aside ul.nav-list > li > a {
 }
 /* #Footer */
 #footer {
-	background: #151234!important;
+	
 	/* border-top: 4px solid #2d343e; */
 	font-size: 0.9em;
 	margin-top: 0px;
-	padding: 80px 0 0;
+	/* padding: 80px 0 0; */
 	position: relative;
 	clear: both;
 	width: 77%;
@@ -1977,7 +1978,7 @@ aside ul.nav-list > li > a {
 }
 
 #footer h4 {
-	font-family: 'IBM Plex Mono', monospace !important;
+		font-family: 'Share Tech', sans-serif !important;
 	font-size: 28px;
 	font-weight: 200;
 	letter-spacing: -2px;
@@ -1992,7 +1993,7 @@ aside ul.nav-list > li > a {
 	/* padding-bottom: 11px; */
 	font-size: 18px;
 	line-height: 38px;
-	font-family: 'IBM Plex Mono', monospace !important;
+		font-family: 'Share Tech', sans-serif !important;
 	letter-spacing: -1px;
 }
 
@@ -2313,11 +2314,11 @@ html.boxed.no-page-top .portfolio-title {
 
 
 .sf{
-	font-family: 'IBM Plex Mono', monospace !important;
+		font-family: 'Share Tech', sans-serif !important;
 }
 
 .sfBold{
-	font-family: 'IBM Plex Mono', monospace !important;
+		font-family: 'Share Tech', sans-serif !important;
 }
 
 .mt-2{

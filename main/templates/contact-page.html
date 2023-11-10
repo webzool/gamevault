@@ -9,18 +9,23 @@
 
 
 {% block content %}
-<section class="bannerSp">
+<style>
+           #head-form-div{
+                background-image:url(/static/img/PinkAbout.webp) ;
+        }
+</style>
+<br>
+<br>
+<section id="head-form-div" >
+        <section >
 			 
-        <div style="margin-top: 25px !important;" class="container">
+        <div  style="margin-top: 25px !important;" class="container">
         
-              <div id="landingContact-Text" class="row">
+              <div  id="landingContact-Text" class="row">
                 
               
-                <div  style="display: block !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
-                      <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/>
-              </div>
-              
-                <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+           <div style="margin: auto;"> 
+                 <div  style="background-color: #45295C; float: none !important; padding: 25px; border-radius: 5px; margin: auto;" class="col-md-5 col-12">
                                <div class="alert alert-success hidden" id="contactSuccess">
                                 <strong>Success!</strong> Your message has been sent to us.
                               </div>
@@ -145,20 +150,33 @@
                                 </div>
                                </form>
                       </div>	
+
+   
+
+
+
+
+
+           </div>
+
+
+              
+               
               
         </div>
-        
+        <br><br><br>
+        <h1 style="color: white; text-align: center;">
+          Contact
+        </h1>
         </section>
-        <div class="container">
-                <div class="divider"></div>
-        </div>
+        
+</section>
+    <br><br><br>
 <div class="container">
 <div role="main" class="main">
 	{{ contact_content.content|safe }}
 </div>
 </div>
-<div class="container">
-        <div class="divider"></div>
-</div>
+
 {% endblock %}
 

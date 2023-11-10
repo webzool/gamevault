@@ -1,7 +1,6 @@
 /* Add here all your CSS customizations */
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 
 .main__columns{
     height: 270px;
@@ -24,7 +23,7 @@
  }
  .blog__tit{
     font-weight: 500;
-    font-family: 'IBM Plex Mono', monospace !important;
+    	font-family: 'Share Tech', sans-serif !important;
     margin-top: 25px;
     font-size: 28px;
     font-weight: 700;
@@ -53,7 +52,7 @@
     display: flex;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: rgba(15, 12, 33, 1);
+    background-color: #190B1F !important;
     align-items: center;
     justify-content: center;
     height: 46px;
@@ -105,12 +104,12 @@
 }
 
 html, body,h1,h2,h3,h4{
-    font-family: 'IBM Plex Mono', monospace !important;
+    	font-family: 'Share Tech', sans-serif !important;
     /* font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue !important; */
 }
 
 body{
-    background: rgba(15, 12, 33, 1);
+    background:rgba(25, 11, 31, 1) !important;
 
 }
 
@@ -122,7 +121,7 @@ body{
     text-align: left;
     color: #F9F1F1;
     margin-top: 25px;
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
  
 }
 .sticky_sidebar{
@@ -133,7 +132,7 @@ body{
 
 
 .recet__text{
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
  font-size: 18px;
 font-weight: 700;
  letter-spacing: 1px;
@@ -215,7 +214,7 @@ line-height: 28px;
     align-items: center;
 }
 .categories__a{
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
     color: inherit;
     color: white ;
     font-size: 20px;
@@ -240,7 +239,7 @@ line-height: 28px;
 }
 
 .categories__title{
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
     color: #F9F1F1;
     padding-bottom: 26px;
     border-bottom: 1px solid rgba(253, 252, 255, 0.32) ;
@@ -259,7 +258,7 @@ line-height: 28px;
     margin-bottom: 0;
 }
 .titSearch__search{
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
     text-decoration: none ;
     color: white;
     cursor: pointer;
@@ -295,7 +294,7 @@ line-height: 28px;
 }
 
 .postt__text{
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
 font-size: 16px;
 font-weight: 400;
 margin-bottom: 10px;
@@ -325,7 +324,7 @@ text-align: left;
 }
 .postt__title{
  font-size: 16px;
- font-family: 'IBM Plex Mono', monospace !important; 
+ 	font-family: 'Share Tech', sans-serif !important; 
 font-weight: 600;
 margin: 10px 0;
 line-height: 20px;
@@ -337,7 +336,7 @@ color: #FFB80D;
 }
 
 .postt__title2{
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
@@ -383,8 +382,8 @@ padding-right: 60px;
 .logoImage{
     /* width: 150px !important; */
     margin-top: 0 !important;
-    width: 303px;
-    height: 50px;
+    width: 150px;
+    height: 70px;
 }
 .text-white{
     color: white;
@@ -442,10 +441,9 @@ padding-right: 60px;
     width: 77%;
   left: 50%;
   transform: translateX(-50%);
-     padding-top: 0 !important;
-    margin-top: 0 !important;
+
     background-color: transparent !important;
-	background: rgba(21, 18, 52, 1)!important;
+	background: rgba(25, 11, 31, 1) !important;
     }
 
     @media (max-width:1200px){
@@ -462,7 +460,7 @@ padding-right: 60px;
      font-size: 18px;
     font-weight: 400;
     color: #ffffff !important;
-    background: rgba(15, 12, 33, 1);
+    background: #190B1F !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);     
      border-radius: 6px;
      border: none;
@@ -552,7 +550,7 @@ padding-right: 60px;
     text-decoration: none;
 }
  .pagi__arrow{
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
  font-size: 28px;
 font-weight: 700;
 line-height: 40px;
@@ -682,7 +680,7 @@ color: #a9a9a9 !important;
     font-style: italic;
     font-weight: 100;
     padding-top: 20px;
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
     line-height: 28px;
     letter-spacing: 0px;
     text-align: center;
@@ -758,7 +756,7 @@ height: fit-content !important;
     /* line-height: 64px; */
     letter-spacing: -2px;
     text-align: left;
-    background: #3C5799   ;
+    background: #FDB92F   ;
     border-radius: 5px;
     padding: 10px 23px;
     margin-right: 15px;
@@ -768,7 +766,7 @@ height: fit-content !important;
 
 .tags__anchor:hover{
 text-decoration: none;
-background-color: #5e81da!important;
+background-color: #FDB92F  !important;
 color: #000000 !important;
 }
 
@@ -778,7 +776,7 @@ color: #000000 !important;
 font-weight: 700;
  text-align: left;
  color: #F9F1F1;
- font-family: 'IBM Plex Mono', monospace !important; 
+ 	font-family: 'Share Tech', sans-serif !important; 
     font-size: 24px;
     line-height: 64px;
     letter-spacing: -2px;
@@ -857,7 +855,7 @@ background-color: inherit;
 }
 .panelGroup__heading .shorter__sp{
     color: white;
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
     font-size: 16px;
     margin-bottom: 3px;
     font-weight: 300;
@@ -928,7 +926,7 @@ padding-bottom: 30px;
  
 }
 .software__text{
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
@@ -940,7 +938,7 @@ padding-bottom: 30px;
 text-align: left;
 font-weight: 500;
 font-size: 30px;
-    font-family: 'IBM Plex Mono', monospace !important; 
+    	font-family: 'Share Tech', sans-serif !important; 
 }
 
 .software__section{

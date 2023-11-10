@@ -2,7 +2,7 @@ from django.urls import path
 from main.views import (AboutPageContentView, Faq, BlogPageContentView, BlogCategoryListView,
                         BlogTagListView,
                         PrivacyPageContentView, GamePageContentView, ContactPageContentView, SoftwareDetailsView,
-                        ThankYou,DownloadApp ,NotFound,TermsPageContentView, base, home, thank_you, get_aweber_credentials,blog_detail)
+                        ThankYou,DownloadApp,spartacus ,NotFound,TermsPageContentView, base, home, thank_you, get_aweber_credentials,blog_detail)
 
 app_name = 'main'
 
@@ -15,6 +15,7 @@ urlpatterns = [
     path('faq/', Faq.as_view(), name='faq'),
     path('contact/', ContactPageContentView.as_view(), name='contact'),
     path('thank-you', thank_you, name='thank_you'),
+    path('spartacus/', spartacus.as_view(), name='spartacus'),
     path('', home, name='home'),
     path('', base, name='base'),
     path('software/<slug:slug>/',

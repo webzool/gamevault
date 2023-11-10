@@ -240,6 +240,8 @@ class DownloadApp(TemplateView):
     template_name = 'download-app.html'
 class NotFound(TemplateView):
     template_name = 'not-found.html'
+class spartacus(TemplateView):
+    template_name = 'spartacus.html'
 
 @api_view(['GET'])
 def get_aweber_credentials(request):

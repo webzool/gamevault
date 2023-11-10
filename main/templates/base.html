@@ -79,11 +79,12 @@
 	
 		
 		<style>
+			
 			body{
 				overflow-x: hidden;
 			}
 			#landingContact-Text{
-				margin-top: 15px;
+				margin-top: 45px;
 			}
 			/* The Modal (background) */
 			.modal {
@@ -245,6 +246,9 @@
 			}.first-social-column{
 				display: flex;
 			} */
+			p{
+				font-size: 18px;
+			}
 			#social-icons{
 				/* width: 100% !important; */
 				margin: 25px auto;
@@ -267,6 +271,7 @@
 				width: 60px;
 				height: 60px;
 			}
+			
 		@media(max-width:1500px ){
 			#header .container{
 				width: 95vw;
@@ -314,6 +319,7 @@
 		}
 	}
 		
+
 	
 		</style>
 	</head>
@@ -336,7 +342,7 @@
 					<div class="logo">
 						<a href="/">
 					
-								<img class="logoImage" alt="gamevaultcasino-logo" height="50" src="{% static 'img/gamevaultcasino.png' %}">
+								<img class="logoImage" alt="gamevaultcasino-logo" height="50" src="{% static 'img/GVLogo.png' %}">
 					
 							
 						</a>
@@ -441,80 +447,28 @@
 			  </script>
 
             <footer id="footer">
-				<div style="width: 99% !important;" class="container">
+				<div  class="container">
 					<div class="row">
-						<div class="col-md-4 mr-5">
-							<div class="text-center contact-details">
-								<!-- <h4 class="text-center">Contact  us</h4> -->
-								<ul class="contact">
-
- 									<li class="text-center"> 
-										<div class="logo mb-20">
-										<a href="{% url 'main:home' %}">
-											<img class="logoImage footer_logo" alt="Footer-logo" width="148" height="100%" src="{% static 'img/gamevaultcasino.png' %}">
-										</a>
-									</div></li>
-									<!-- <li>
-										<p class="d-flex justify-content-center">
-											<a class="sf" href="mailto:sales@gamevaultcasino.com">Email: sales@gamevault-casino.com</a>
-										</p>
-										<p class="d-flex justify-content-center">
-											<a href="https://t.me/gamevaultcasinoofficial"> <i class="fa-brands fa-telegram"></i> <span>telegram</span></a>
-										</p>
-										
-									</li>
-									<li>
-										<div id="motion-div">
-										<p id="motion-p" class="d-flex justify-content-center  animation">
-											<i id="motion-i" class="fa text-green phone-icon  animation_shining fa-phone"></i>
-											<a id="motion-number" class="sfBold animation_shining" href="tel:+1 (510) 9821225 ">+1 (510) 9821225</a>
-										
-										</p>
-									</li> -->
-							
-									<!-- <li>
-										<div class="d-flex justify-content-left">
-											<div id="social-icons" >
-												<ul class="social-icons">
-													<li><a href="https://twitter.com/gamevaultcasino00" target="_blank" rel="tooltip" title="Twitter" aria-label="gamevaultcasino-twitter-link"><i class="fa fa-twitter"></i></a></li>
-													<li><a href="https://www.facebook.com/profile.php?id=100090066200313" target="_blank" rel="tooltip" title="Facebook" aria-label="gamevaultcasino-facebook-link"><i class="fa fa-facebook"></i></a></li> 
-													<li><a href="https://www.instagram.com/gamevaultcasinogame/" target="_blank" rel="tooltip" title="instagram" aria-label="gamevaultcasino-instagram-link"><i class="fa fa-instagram"></i></a></li>
-													<li><a href="https://t.me/gamevaultcasinoofficial" target="_blank" rel="tooltip" title="telegram" aria-label="gamevaultcasino-telegram-link"><i class="fa fa-telegram"></i></a></li>
-													<li><a href="https://www.reddit.com/user/gamevaultcasinogame" target="_blank" rel="tooltip" title="reddit" aria-label="gamevaultcasino-reddit-link"><i class="fa fa-reddit"></i></a></li> 
-													<li><a href="https://www.quora.com/profile/gamevaultcasinogame" target="_blank" rel="tooltip" title="quora" aria-label="gamevaultcasino-quora-link"><i class="fa fa-quora"></i></a></li>
-													
-												</ul>
-											</div>
-											</div>
-										
-									  </li> -->
-										
-									
-								
-										
-							
-								
-									
-									
-							</ul>
-								
-								</div>
-							
-								
-							  
-                                  
-								
-								
+						<div style="text-align: center;" class="logo mb-20">
+							<a href="{% url 'main:home' %}">
+								<img class="logoImage footer_logo" alt="Footer-logo" width="148" height="100%" src="{% static 'img/GVLogo.png' %}">
+							</a>
 						</div>
-						<div style="width: 99%; box-sizing: border-box;" >
+				
+						<div style="width: 99%; box-sizing: border-box; border-top: 1px solid red; border-bottom: 1px solid red;" >
 							
 							<ul style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2;" class="nav nav-list primary ">
 								<li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:games' %}">Games</a></li>
 								&nbsp;
-                                <!-- <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:about' %}">About us</a></li> -->
                                 <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
 								&nbsp;
                                 <li ><a  style="color: #FFB80D;" title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:privacy-policy' %}">Privacy  policy</a></li>
+                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
+                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
+                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
+                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
+                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
+
  							</ul>
 						</div>
 						<!-- <div class="col-md-4">
