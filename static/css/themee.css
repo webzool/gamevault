@@ -1057,8 +1057,8 @@ body.sticky-menu-active #header .header-top {
 
   /* Responsive Button Nav */
 	.btn-responsive-nav {
-	    background: #021926;
-    	border-bottom-color: #021926	!important;
+	    background: rgba(152, 25, 99, 1);
+    	border-bottom-color: #005281	!important;
 		top: 15px;
 		display: block;
 		position: absolute;

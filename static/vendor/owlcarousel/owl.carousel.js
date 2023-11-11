@@ -1451,10 +1451,10 @@ if (typeof Object.create !== "function") {
 
     $.fn.owlCarousel.options = {
 
-        items : 1,
+        items : 3,
         itemsCustom : false,
-        itemsDesktop : [1199, 1],
-        itemsDesktopSmall : [979, 1],
+        itemsDesktop : [1199, 3],
+        itemsDesktopSmall : [979, 2],
         itemsTablet : [768, 1],
         itemsTabletSmall : false,
         itemsMobile : [479, 1],
@@ -1468,16 +1468,16 @@ if (typeof Object.create !== "function") {
         autoPlay : 2000,
         stopOnHover : false,
 
-        navigation : false,
-        navigationText : ["prev", "next"],
+        navigation : true,
+        navigationText : ["<", ">"],
         rewindNav : true,
         scrollPerPage : false,
 
         pagination : false,
         paginationNumbers : false,
 
-        responsive : false,
-        responsiveRefreshRate : 200,
+        responsive : true,
+        responsiveRefreshRate : 500,
         responsiveBaseWidth : window,
         baseClass : "owl-carousel",
         theme : "owl-theme",

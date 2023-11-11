@@ -11,7 +11,7 @@
 		
 		<title>Check Out The Best Sweepstakes Games in gamevaultcasino Casino </title>
 		<meta name="keywords" content="gamevaultcasino Casino">
-		<meta name="description" content="King of Pop 777 offers industry-standard online casino software to grow your business. Get the top games, bonuses, and more! Sign up now! ">
+		<meta name="description" content="game vault 777 offers industry-standard online casino software to grow your business. Get the top games, bonuses, and more! Sign up now! ">
 		{% endblock title %}
 		<meta name="author" content="gamevaultcasino Casino">
 
@@ -19,7 +19,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Web Fonts  -->
-		<link rel="shortcut icon" href="{% static 'img/gamevaultcasino.png' %}" type="image/x-icon">
+		<link rel="shortcut icon" href="{% static 'img/question.webp' %}" type="image/x-icon">
 		<!-- <link rel="preload" as="image" href="https://gamevault-casino.com/static/img/gamevaultcasinologo.png"> -->
 		<!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Alegreya|Alegreya+SC|Oswald:400,300" rel="stylesheet" type="text/css"> -->
 		<!-- Vendor CSS -->
@@ -82,6 +82,28 @@
 			
 			body{
 				overflow-x: hidden;
+			}
+		
+			.inner-footer{
+				position: relative;
+			}
+			.inner-footer::before{
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 2px;
+                background-image: linear-gradient(to right, rgba(105, 11, 66, 1),rgba(152, 26, 100, 1),rgba(199, 79, 75, 1),rgba(181, 91, 46, 1));
+				top: -10%;
+				left: 0%;
+			}
+			.inner-footer::after{
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 2px;
+                background-image: linear-gradient(to right, rgba(105, 11, 66, 1),rgba(152, 26, 100, 1),rgba(199, 79, 75, 1),rgba(181, 91, 46, 1));
+				bottom: -10%;
+				left: 0%;
 			}
 			#landingContact-Text{
 				margin-top: 45px;
@@ -455,19 +477,26 @@
 							</a>
 						</div>
 				
-						<div style="width: 99%; box-sizing: border-box; border-top: 1px solid red; border-bottom: 1px solid red;" >
+						<div class="inner-footer" style="width: 99%; box-sizing: border-box; " >
 							
 							<ul style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2;" class="nav nav-list primary ">
+								<li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:home' %}">Home</a></li>
+									&nbsp;	&nbsp;	&nbsp;	&nbsp;
+								<li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:about' %}">About</a></li>
+									&nbsp;	&nbsp;	&nbsp;	&nbsp;
 								<li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:games' %}">Games</a></li>
-								&nbsp;
+								&nbsp;&nbsp;	&nbsp;	&nbsp;
+                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:blogs' %}">Blog</a></li>
+								&nbsp;&nbsp;	&nbsp;	&nbsp;
+                              
+                   
+                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:contact' %}">Contact</a></li>
+									&nbsp;	&nbsp;	&nbsp;	&nbsp;
+                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:faq' %}">Faq</a></li>
+									&nbsp;	&nbsp;	&nbsp;	&nbsp;
                                 <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
-								&nbsp;
+									&nbsp;	&nbsp;	&nbsp;	&nbsp;
                                 <li ><a  style="color: #FFB80D;" title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:privacy-policy' %}">Privacy  policy</a></li>
-                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
-                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
-                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
-                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
-                                <li><a title="Class aptent taciti sociosqu ad litora torquent" href="{% url 'main:terms-and-conditions' %}">Terms  and  conditions</a></li>
 
  							</ul>
 						</div>
