@@ -3,21 +3,47 @@
   <meta name="robots" content="noindex">
 {% endblock title %} {% block content %}
  <!-- inner hero section start -->
- <section class="bannerSp">
-			 
-    <div style="margin-top: 25px !important;" class="container">
+
+ <style>
+     #head-form-div{
+                background-image:url(/static/img/Blues.webp) ;
+        }
+        #down-home {
+            background-image: linear-gradient(20deg,rgba(105, 11, 66, 1),rgba(152, 26, 100, 1),rgba(199, 79, 75, 1),rgba(181, 91, 46, 1)) !important;
+
+ margin: auto;
+  }
+       .bannerSp{
+			background-image: url(/static/img/blog-banner.webp);
+	
+		}
+  .blog__text_content a{
+    color: #5F7E08 !important;
+    display: inline !important;
+  }
+  .blog__text_content a:hover{
+    text-decoration: underline !important;
+  }
+  .bannerSp__imageWrapper_right{
+          margin: 25% auto ;
+          }
+  @media (max-width:993px){
+          .bannerSp__imageWrapper_right{
+                  margin: unset !important;
+          }
+  }
+ </style>
+ <br><br><br>
+ <section id="head-form-div" >
+    <section >
+         
+    <div  style="margin-top: 25px !important;" class="container">
     
-          <div id="landingContact-Text" class="row">
+          <div  id="landingContact-Text" class="row">
             
           
-            <div  style=" display: flex !important; justify-content: center !important; flex-direction: column !important; "  class="col-md-7 col-12 bannerSp__imageWrapper_right">
-                  <!-- <img id="right-banner" loading="lazy" alt="gamevaultcasino-online-casino" width="100%"   src="../../static/img/KingPopLeftBanner.png""/> -->
-               <h1 style="color: #FFB80D; font-weight: 900; text-align: center;">
-                   Blog Tags
-               </h1>  
-          </div>
-          
-            <div  style="background-color: rgba(35, 39, 77, 1); padding: 25px; border-radius: 20px;" class="col-md-5 col-12">
+       <div style="margin: auto;"> 
+             <div  style="background-color: #45295C; float: none !important; padding: 25px; border-radius: 5px; margin: auto;" class="col-md-5 col-12">
                            <div class="alert alert-success hidden" id="contactSuccess">
                             <strong>Success!</strong> Your message has been sent to us.
                           </div>
@@ -142,10 +168,27 @@
                             </div>
                            </form>
                   </div>	
+
+
+
+
+
+
+
+       </div>
+
+
+          
+           
           
     </div>
-    
+    <br><br><br>
+    <h1 style="color: white; text-align: center;">
+          Games
+    </h1>
     </section>
+    
+</section>
     <div class="container">
         <div class="divider"></div>
  <section class="blog-section padding-top padding-bottom overflow-hidden">
@@ -264,12 +307,12 @@
             }
     }
     .blog-item{
-        background-color:#23274D ;
+        background-color:#45295C ;
         box-shadow: unset !important;
         border-radius: 20px !important;
     }
    .blog-item:hover{
-    box-shadow: 0px 0px 20px  #8babfa!important;
+    box-shadow: 0px 0px 20px  rgb(255, 148, 72)!important;
    }
    h3{
     color: #FFB80D;
@@ -298,13 +341,13 @@
         }
     
         a.btn.post__btn {
-            background-color: #3C5799 ;
-            border: 1px solid #3C5799 !important;
+            background-color: #FDB92F ;
+            border: 1px solid #FDB92F !important;
             color: #ffffff;
             width: 100%;
         }
         a.btn.post__btn:hover {
-            background-color: #5e81da!important;
+            background-color: rgb(247, 179, 43)!important;
             color: #000000 !important;
         }
         p.blog__meta {
