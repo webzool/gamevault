@@ -5,6 +5,22 @@
 {% endif %}
 {% endblock title %} {% block content %}
 <style>
+    #inner-blog{
+        width: 45%;
+        padding: 25px;
+    }
+    #outer-blog{
+        display: flex;
+        justify-content: space-between;
+        margin: 15px auto;
+    }
+    #outer-blog:nth-child(odd){
+    background-color: transparent;
+   }
+   #outer-blog:nth-child(even){
+    background-color: #2B153C !important;
+    flex-direction: row-reverse;
+   }
         #head-form-div{
                 background-image:url(/static/img/Blues.webp) ;
         }
@@ -33,18 +49,30 @@
             margin: 25% auto ;
             }
     @media (max-width:993px){
+        #outer-blog{
+            margin: 15px auto;
+        display: block;
+       
+    }
+    #inner-blog{
+        width: 100% !important;
+    }
             .bannerSp__imageWrapper_right{
                     margin: unset !important;
             }
     }
+    a.btn.post__btn:active{
+        background-color: #45295C !important;
+    }
     .blog-item{
-        background-color:#45295C ;
+        /* background-color:#45295C ; */
         box-shadow: unset !important;
         border-radius: 20px !important;
     }
-   .blog-item:hover{
+   /* .blog-item:hover{
     box-shadow: 0px 0px 20px  rgb(255, 148, 72)!important;
-   }
+   } */
+  
    h3{
     color: #FFB80D;
     font-size: 36px;
@@ -269,16 +297,14 @@
             
             <div class="row align-items-center">
                 
-                <div class="col-lg-9">
+                <div class="container">
                     
-                    <div class="row align-items-center">
+                    <div id="grand-blog" class="row align-items-center">
                         {% for blog in blogs %}
-                            <div class="col-lg-6">
-                                <div class="blog-item">
-                                    <div class="blog-item__thumb">
-                                        <img class="post__image" src="{{blog.image.url}}" alt="{{blog.image_alt}}">
-                                    </div>
-                                    <div class="blog-item__content">
+                            <div id="outer-blog" >
+                                <div id="inner-blog" class="blog-item">
+                                  
+                                    <div  class="blog-item__content">
                                         <p style="color: white !important;" class="blog__meta">{{blog.created_at}}</p>
                                         <h3 >
                                             <a href="{% url 'main:blog-detail' blog.slug %}" class="post__anch">
@@ -294,35 +320,14 @@
                                        
                                     </div> 
                                 </div>
+                                <div id="inner-blog"  class="blog-item__thumb">
+                                    <img class="post__image" src="{{blog.image.url}}" alt="{{blog.image_alt}}">
+                                </div>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <!-- <div class="categories">
-                        <h2 class="categories__title">Categories</h2>
-                        <ul class="categories__ul">
-                            {% for category in categories %}
-                            <li class="categories__li">
-                                <a href="{% url 'main:blog-category-list' category.slug %}" class="categories__a">{{ category.title }}</a>
-                            </li>
-                            {% endfor %} 
-                        </ul>
-                    </div> -->
-                    <div class="categories">
-                        <h2 class="categories__title">Recent posts</h2>
-                        {% for recent in recent_blogs %}
-                        <div class="recet">
-                            <a href="{% url 'main:blog-detail' slug=recent.slug %}">
-                                <h3 class="postt__title">{{recent.title}}</h3>
-                                <p class="recet__text">
-                                    {{recent.created_at}}
-                                </p>
-                            </a>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
+             
                 <div class="col-lg-12" style="margin-bottom: 5rem;">
                     <div class="pagi">
                         {% if page_obj.has_previous %}
@@ -369,6 +374,31 @@
                         {% endif %}
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- <div class="categories">
+                <h2 class="categories__title">Categories</h2>
+                <ul class="categories__ul">
+                    {% for category in categories %}
+                    <li class="categories__li">
+                        <a href="{% url 'main:blog-category-list' category.slug %}" class="categories__a">{{ category.title }}</a>
+                    </li>
+                    {% endfor %} 
+                </ul>
+            </div> -->
+            <div class="categories">
+                <h2 class="categories__title">Recent posts</h2>
+                {% for recent in recent_blogs %}
+                <div class="recet">
+                    <a href="{% url 'main:blog-detail' slug=recent.slug %}">
+                        <h3 class="postt__title">{{recent.title}}</h3>
+                        <p class="recet__text">
+                            {{recent.created_at}}
+                        </p>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

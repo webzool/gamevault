@@ -453,7 +453,10 @@ html.no-page-top body > .body {
 	text-align: left;
 	font-family: 'Share Tech', sans-serif !important;
 }
-
+#header nav ul.nav-main li a:hover{
+	background-color: rgba(152, 25, 99, 1);
+	border-radius: 10px;
+}
 #header nav ul.nav-main li a:active {
 	/* activehere */
 }
