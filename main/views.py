@@ -69,7 +69,7 @@ def home(request):
         recaptcha_response = request.POST.get('g-recaptcha-response')
         print(recaptcha_response, 'recaptcha_response')
         url = 'https://www.google.com/recaptcha/api/siteverify'
-        myobj = {'secret': '6LcxWx8iAAAAAE5l2NPP4MJLTmINRL4uzcjkvDsU',
+        myobj = {'secret': '6Lf7dxUpAAAAAFV2B_Rwg2xExTtimkKLdFNzUYnz',
                  'response': recaptcha_response}
         x = requests.post(url, data=myobj)
         name = request.POST.get('name').split()
